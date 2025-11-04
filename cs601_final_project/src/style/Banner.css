@@ -1,0 +1,18 @@
+#banner {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(125deg, rgb(64, 201, 255, .8) 0%, rgb(64, 201, 255, .8) 70%, rgba(255, 255, 255, 0) 75%);
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+#siteTitle {
+    display: flex;
+}
+
