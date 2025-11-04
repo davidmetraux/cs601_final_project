@@ -10,6 +10,10 @@
     list-style-type: none;
     padding-right: 40px;
     padding-left: 40px;
+    background-color: rgba(67, 143, 143, 0.911);
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #siteTitle {
@@ -17,3 +21,9 @@
     margin-left: 10px;
 }
 
+/* @container title (width>500px) { */
+    #headShot{
+        height: 120px;
+        margin-bottom: -50px;
+    }
+/* } */

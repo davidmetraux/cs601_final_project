@@ -1,12 +1,13 @@
 import { Button } from '@mui/material';
 import '../style/Banner.css'
+import headshot from '../media/headshot_no_bg.png'
 
 function Banner(){
     return (
     <div id='banner'>
         <div id='siteTitle'>
             <h1>David Metraux</h1>
-            <div>Image</div>
+            <div><img id="headShot" src={headshot}></img></div>
         </div>
 
         <div>
