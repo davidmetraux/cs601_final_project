@@ -1,7 +1,7 @@
 #banner {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(125deg, rgb(64, 201, 255, .8) 0%, rgb(64, 201, 255, .8) 70%, rgba(255, 255, 255, 0) 75%);
+    background: linear-gradient(125deg, rgb(64, 201, 255, .8) 0%, rgb(64, 201, 255, .8) 70%, rgba(255, 255, 255, 0) 71%);
 }
 
 #menu {
@@ -14,5 +14,6 @@
 
 #siteTitle {
     display: flex;
+    margin-left: 10px;
 }
 
