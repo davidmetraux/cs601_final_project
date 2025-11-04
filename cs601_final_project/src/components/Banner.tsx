@@ -7,7 +7,10 @@ function Banner(){
     <div id='banner'>
         <div id='siteTitle'>
             <h1>David Metraux</h1>
-            <div><img id="headShot" src={headshot}></img></div>
+            <div id="headShot">
+                <div className='overlay'></div>
+                <img  src={headshot}></img>
+            </div>
         </div>
 
         <div>
