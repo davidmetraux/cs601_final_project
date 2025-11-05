@@ -9,7 +9,7 @@ function Banner(){
             <h1>David Metraux</h1>
             <div id="headShot">
                 <div className='overlay'></div>
-                <img  src={headshot}></img>
+                <img  height="120" src={headshot}></img>
             </div>
         </div>
 

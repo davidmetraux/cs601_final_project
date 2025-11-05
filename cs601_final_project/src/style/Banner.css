@@ -1,7 +1,7 @@
 #banner {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(125deg, rgb(86, 206, 253) 0%, rgb(86, 206, 253) 70%, rgba(255, 255, 255, 0) 71%);
+    background: linear-gradient(125deg, rgb(86, 206, 253) 0%, rgb(86, 206, 253) 80%, rgba(255, 255, 255, 0) 81%);
 }
 
 #menu {
@@ -10,12 +10,13 @@
     list-style-type: none;
     padding-right: 40px;
     padding-left: 40px;
-    background-color: rgba(67, 143, 143, 0.911);
-    margin-bottom: 0px;
+    background-color: rgba(67, 143, 143);
+    margin-bottom: -10px;
     padding-top: 5px;
     padding-bottom: 5px;
     z-index: 2;
     position: relative;
+    border-radius: 10px;
 }
 
 #siteTitle {
@@ -28,13 +29,9 @@
         height: 120px;
         margin-bottom: -50px;
 
-        img {
-            max-height: 100%;
-        }
-
         .overlay {
             height: 100%;
-            width: 80px;
+            width: 70px;
             margin-bottom: -120px;
             z-index: 1;
             position: relative;
