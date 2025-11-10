@@ -17,6 +17,24 @@
     z-index: 2;
     position: relative;
     border-radius: 10px;
+    a {
+        background-color: #61cefa;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        height: 30px;
+        padding: 3px;
+        text-decoration: none;
+        color:black
+    }
+
+    a:hover {
+        background-color: cadetblue;
+    }
+
+    a:active {
+        background-color: #61cefa;
+    }
 }
 
 #siteTitle {
