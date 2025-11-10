@@ -1,6 +1,7 @@
 import { Button } from '@mui/material';
 import '../style/Banner.css'
 import headshot from '../media/headshot_no_bg.png'
+import { JSX } from 'react';
 
 const links: {name: string, href: string}[]  = [
     {name: "One", href: "/one"},
@@ -10,7 +11,7 @@ const links: {name: string, href: string}[]  = [
 
 function Banner(){
 
-    const listLinks = links.map((link)=>{
+    const listLinks: JSX.Element[] = links.map((link)=>{
         return <li key={link.href}><a href={link.href}>{link.name}</a></li>
     })
 
@@ -26,9 +27,6 @@ function Banner(){
 
         <div>
             <menu id='menu'>
-                {/* <li><button>One</button></li>
-                <li><button>Two</button></li>
-                <li><button>Three</button></li> */}
                 {listLinks}
 
             </menu>

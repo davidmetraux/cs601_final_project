@@ -2,29 +2,21 @@
     padding-left: 10%;
     padding-right: 10%;
     flex-grow: 1;
-    display: flex;
     overflow-y: auto;
-    height: 0;
+    height: 0; /*needed for scrollbar*/
     background-color: #76bbc1;
 }
 
-/* width */
+
 ::-webkit-scrollbar {
   width: 15px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(65, 119, 122); 
-}
- 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #476e72; 
   border-radius: 0px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #476e72; 
 }
