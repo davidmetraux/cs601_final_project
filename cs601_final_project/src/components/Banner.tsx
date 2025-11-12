@@ -18,13 +18,17 @@ function Banner(){
 
     return (
     <div id='banner'>
-        <div id='siteTitle'>
-            <h1>David Metraux</h1>
-            <div id="headShot">
-                <div className='overlay'></div>
-                <img  height="120" alt='headshot of David Metraux, man with long hair and beard' src={headshot}></img>
+        
+            <div id='siteTitle'>
+                <Link to={{pathname: ""}} className='titleLayer'>
+                    <h1>David Metraux</h1>
+                    <div id="headShot">
+                        <div className='overlay'></div>
+                        <img  height="120" alt='headshot of David Metraux, man with long hair and beard' src={headshot}></img>
+                    </div>
+                </Link>
             </div>
-        </div>
+
 
         <div>
             <menu id='menu'>

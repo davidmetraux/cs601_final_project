@@ -43,6 +43,12 @@
     margin-left: 10px;
 }
 
+.titleLayer {
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+
 #headShot{
     height: 120px;
     margin-bottom: -50px;
