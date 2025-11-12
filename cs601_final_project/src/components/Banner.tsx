@@ -2,17 +2,18 @@ import { Button } from '@mui/material';
 import '../style/Banner.css'
 import headshot from '../media/headshot_no_bg.png'
 import { JSX } from 'react';
+import { Link } from "react-router";
 
 const links: {name: string, href: string}[]  = [
-    {name: "One", href: "/cs601_final_project/#one"},
-    {name: "Two", href: "/cs601_final_project/#two"},
-    {name: "Three", href: "/cs601_final_project/#three"}
+    {name: "One", href: "one"},
+    {name: "Two", href: "two"},
+    {name: "Three", href: "three"}
 ]
 
 function Banner(){
 
     const listLinks: JSX.Element[] = links.map((link)=>{
-        return <li key={link.href}><a href={link.href}>{link.name}</a></li>
+        return <li key={link.href}><Link to={{pathname: link.href}} >{link.name}</Link></li>
     })
 
     return (
