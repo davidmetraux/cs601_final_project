@@ -4,8 +4,7 @@ import './style/App.css';
 import Banner from './components/Banner';
 import MainContentWrapper from './components/MainContentWrapper';
 
-import { BrowserRouter, Route, Routes } from "react-router";
-import ReactDOM from "react-dom/client";
+import { Route, Routes } from "react-router";
 import { HashRouter } from 'react-router-dom';
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
                 Learn React
               </a>
             </div>} />
-            <Route path="/one" element={<div></div>} />
+            <Route path="/one" element={<div>test</div>} />
           </Routes>
         </MainContentWrapper>
       </div>

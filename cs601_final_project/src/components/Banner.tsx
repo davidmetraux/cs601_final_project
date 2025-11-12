@@ -4,9 +4,9 @@ import headshot from '../media/headshot_no_bg.png'
 import { JSX } from 'react';
 
 const links: {name: string, href: string}[]  = [
-    {name: "One", href: "/one"},
-    {name: "Two", href: "/two"},
-    {name: "Three", href: "/three"}
+    {name: "One", href: "/cs601_final_project/#one"},
+    {name: "Two", href: "/cs601_final_project/#two"},
+    {name: "Three", href: "/cs601_final_project/#three"}
 ]
 
 function Banner(){
