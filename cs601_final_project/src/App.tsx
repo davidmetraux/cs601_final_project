@@ -6,41 +6,38 @@ import MainContentWrapper from './components/MainContentWrapper';
 
 import { BrowserRouter, Route, Routes } from "react-router";
 import ReactDOM from "react-dom/client";
+import { HashRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header><Banner></Banner></header>
-      <MainContentWrapper>
-        <div className="App-body">
-              <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </div>
-      </MainContentWrapper>
-    </div>
+    <HashRouter>
+      <div className="App">
+        <header><Banner></Banner></header>
+        <MainContentWrapper>
+          <Routes>
+            <Route path="/" element={
+            <div className="App-body">
+                  <img src={logo} className="App-logo" alt="logo" />
+              <p>
+                Edit <code>src/App.tsx</code> and save to reload.
+              </p>
+              <a
+                className="App-link"
+                href="https://reactjs.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn React
+              </a>
+            </div>} />
+            <Route path="/one" element={<div></div>} />
+          </Routes>
+        </MainContentWrapper>
+      </div>
+    </HashRouter>
   );
 }
 
-// const root = document.getElementById("root")!;
-
-// ReactDOM.createRoot(root).render(
-//   <BrowserRouter>
-//     <Routes>
-//       <Route path="/one" element={<App />} />
-//       <Route path="/" element={<App />} />
-//     </Routes>
-//   </BrowserRouter>,
-// );
 
 
 export default App;
