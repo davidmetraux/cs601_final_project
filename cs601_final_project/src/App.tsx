@@ -4,6 +4,9 @@ import './style/App.css';
 import Banner from './components/Banner';
 import MainContentWrapper from './components/MainContentWrapper';
 
+import { BrowserRouter, Route, Routes } from "react-router";
+import ReactDOM from "react-dom/client";
+
 function App() {
   return (
     <div className="App">
@@ -27,5 +30,17 @@ function App() {
     </div>
   );
 }
+
+// const root = document.getElementById("root")!;
+
+// ReactDOM.createRoot(root).render(
+//   <BrowserRouter>
+//     <Routes>
+//       <Route path="/one" element={<App />} />
+//       <Route path="/" element={<App />} />
+//     </Routes>
+//   </BrowserRouter>,
+// );
+
 
 export default App;
