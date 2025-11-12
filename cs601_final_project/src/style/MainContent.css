@@ -1,0 +1,22 @@
+.wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 0; /*needed for scrollbar*/
+    background-color: #76bbc1;
+}
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #476e72; 
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #476e72; 
+}
