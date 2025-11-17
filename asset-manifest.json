@@ -1,17 +1,22 @@
 {
   "files": {
-    "main.css": "/cs601_final_project/static/css/main.01ea61c1.css",
-    "main.js": "/cs601_final_project/static/js/main.ab9d3f75.js",
+    "main.css": "/cs601_final_project/static/css/main.f3dd5c59.css",
+    "main.js": "/cs601_final_project/static/js/main.968a8655.js",
     "static/js/453.64647bcb.chunk.js": "/cs601_final_project/static/js/453.64647bcb.chunk.js",
     "static/media/headshot_no_bg.png": "/cs601_final_project/static/media/headshot_no_bg.4fe1ff8f8d988dc16e37.png",
+    "static/media/entities.png": "/cs601_final_project/static/media/entities.3d360c3a9adbd6564e50.png",
+    "static/media/Washed.png": "/cs601_final_project/static/media/Washed.232d815e2d661bebfc18.png",
+    "static/media/900px-Wardens_of_Wildwood_logo.png": "/cs601_final_project/static/media/900px-Wardens_of_Wildwood_logo.d65cd205d1879d7a56ed.png",
+    "static/media/March_of_the_Dead.png": "/cs601_final_project/static/media/March_of_the_Dead.96370bcf1e5269425ab9.png",
+    "static/media/Fall_of_Plaguestone.png": "/cs601_final_project/static/media/Fall_of_Plaguestone.dbe559f4b94450ef9731.png",
     "static/media/logo.svg": "/cs601_final_project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/cs601_final_project/index.html",
-    "main.01ea61c1.css.map": "/cs601_final_project/static/css/main.01ea61c1.css.map",
-    "main.ab9d3f75.js.map": "/cs601_final_project/static/js/main.ab9d3f75.js.map",
+    "main.f3dd5c59.css.map": "/cs601_final_project/static/css/main.f3dd5c59.css.map",
+    "main.968a8655.js.map": "/cs601_final_project/static/js/main.968a8655.js.map",
     "453.64647bcb.chunk.js.map": "/cs601_final_project/static/js/453.64647bcb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.01ea61c1.css",
-    "static/js/main.ab9d3f75.js"
+    "static/css/main.f3dd5c59.css",
+    "static/js/main.968a8655.js"
   ]
 }
