@@ -1,0 +1,46 @@
+
+.root{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: bisque;
+}
+
+#gamesRan {
+    flex-grow: 1;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px
+}
+
+@media screen and (max-width: 640px) {
+    #gamesRan{
+        grid-template-columns: 1fr;
+    }
+}
+
+.section{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* #gamesRan{
+    .gameSection{
+        :nth-child(1) {
+            grid-area: one;
+        }
+        :nth-child(2) {
+            grid-area: two;
+        }
+        :nth-child(3) {
+            grid-area: three;
+        }
+        :nth-child(4) {
+            grid-area: four;
+        }
+
+    }
+} */
+
+

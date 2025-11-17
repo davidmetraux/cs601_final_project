@@ -6,7 +6,7 @@ import { Link } from "react-router";
 
 const links: {name: string, href: string}[]  = [
     {name: "One", href: "one"},
-    {name: "Two", href: "two"},
+    {name: "Pathfinder", href: "pathfinder"},
     {name: "Three", href: "three"}
 ]
 

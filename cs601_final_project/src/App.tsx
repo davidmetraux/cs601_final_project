@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './style/App.css';
 import Banner from './components/Banner';
+import Pathfinder from './pages/Pathfinder';
 import MainContentWrapper from './components/MainContentWrapper';
 
 import { Route, Routes } from "react-router";
@@ -30,6 +31,7 @@ function App() {
               </a>
             </div>} />
             <Route path="/one" element={<div>test</div>} />
+            <Route path="/pathfinder" element={<Pathfinder/>} />
           </Routes>
         </MainContentWrapper>
       </div>
