@@ -3,6 +3,7 @@ import wardens from '../media/900px-Wardens_of_Wildwood_logo.png'
 import plaguestone from '../media/Fall_of_Plaguestone.png'
 import march from '../media/March_of_the_Dead.png'
 import washed from '../media/Washed.png'
+import entities from "../media/entities.png"
 
 function Pathfinder(){
     return (
@@ -14,7 +15,13 @@ function Pathfinder(){
             </div>
             <div className="section">
                 <h3>Pathfinder Infinite: Entities</h3>
-                <p></p>
+                <div>
+                    <img src={entities} width="400"/>
+                    <p>Fourteen mysterious entities beckon your player characters with power. With new bard muses, witch patron themes, a champion cause, an animist apparition, pactbinder feats, wizard focus spells, and covenants, 
+                    who will you evoke the attention of? <a href="https://www.pathfinderinfinite.com/en/product/506194/entities" target="blank">Click here to see on Pathfinder Infinite</a></p>
+                </div>
+                
+                
             </div>
 
             <h3>Games Ran</h3>
@@ -22,7 +29,7 @@ function Pathfinder(){
                 <div className="gameSection section" >
                     <h4>Wardens of Wildwood</h4>
                     <div>
-                        <img src={wardens} width="300"/>
+                        <img src={wardens} width="300" alt="logo for Wardens of Wildwood"/>
                         <p>
                             As the fledgling nation of Taldor grew over millennia, it picked away at the surrounding wilderness, felling valuable trees
                             while riling the beasts, fey, and other inhabitants into generations of cyclical violence. Only millennia later did Taldor 
@@ -36,7 +43,7 @@ function Pathfinder(){
                 <div className="gameSection section">
                     <h4>Fall of Plaguestone</h4>
                     <div>
-                        <img src={plaguestone} width="300"/>
+                        <img src={plaguestone} width="300" alt="logo for Fall of Plaguestone"/>
                         <p>A group of new adventurers traveling through the village of Etran's Folly—also known as Plaguestone—must come together
                         to solve the murder of a friend. What starts as a simple investigation quickly turns sinister with the discovery of forbidden alchemy, mutant animals, and a nearby forest rotting away due to a mysterious blight. 
                         It becomes clear that if these heroes don't intervene to stop whatever evil is brewing, the fall of Plaguestone is all but certain!</p>
@@ -45,7 +52,7 @@ function Pathfinder(){
                 <div className="gameSection section">
                     <h4>March of the Dead</h4>
                     <div>
-                        <img src={march} width="300"/>
+                        <img src={march} width="300" alt="logo for March of the Dead"/>
                         <p>
                             Centuries ago, the massive Shining Crusade destroyed the Whispering Tyrant Tar-Baphon, an
                             incredibly powerful lich. Knowing he might someday return, the Whispering Tyrant’s foes sealed
@@ -61,9 +68,9 @@ function Pathfinder(){
                 <div className="gameSection section" >
                     <h4>Washed</h4>
                     <div>
-                        <img src={washed} width="300"/>
+                        <img src={washed} width="300" alt="A cave filled with ooze"/>
                         <p>In the nation-state of Oenopion in the kingdom of Nex, Alchemy rules with an iron fist. 
-                        Will the heroes uncover the mysteries and free Oenopion from the tyranny of the upper class, or will they be washed away?</p>
+                        Will the heroes uncover the mysteries and free Oenopion from the tyranny of the upper class, or will they be washed away? Note: This was a campaign I personally created.</p>
                     </div>
                 </div>
 
