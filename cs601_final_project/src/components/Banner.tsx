@@ -5,9 +5,8 @@ import { JSX } from 'react';
 import { Link } from "react-router";
 
 const links: {name: string, href: string}[]  = [
-    {name: "One", href: "one"},
+    {name: "Test", href: "test"},
     {name: "Pathfinder", href: "pathfinder"},
-    {name: "Three", href: "three"}
 ]
 
 function Banner(){

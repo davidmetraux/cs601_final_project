@@ -16,21 +16,22 @@ function App() {
         <MainContentWrapper>
           <Routes>
             <Route path="/" element={
-            <div className="App-body">
-                  <img src={logo} className="App-logo" alt="logo" />
-              <p>
-                Edit <code>src/App.tsx</code> and save to reload.
-              </p>
-              <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn React
-              </a>
-            </div>} />
-            <Route path="/one" element={<div>test</div>} />
+              <div className="App-body">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                  Edit <code>src/App.tsx</code> and save to reload.
+                </p>
+                <a
+                  className="App-link"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Learn React
+                </a>
+              </div>} 
+            />
+            <Route path="/test" element={<div>test</div>} />
             <Route path="/pathfinder" element={<Pathfinder/>} />
           </Routes>
         </MainContentWrapper>

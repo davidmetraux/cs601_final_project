@@ -13,18 +13,18 @@ function Pathfinder(){
                 <p>Pathfinder 2e is a cooperative tabletop roleplaying game that lets you build stories and adventures with your friends. 
                 David Metraux has played this a lot as a hobby, and has even created some of his own third party published products for it!</p>
             </div>
+            <h3>Content Published:</h3>
             <div className="section">
-                <h3>Pathfinder Infinite: Entities</h3>
+                <h4>Pathfinder Infinite: Entities</h4>
                 <div>
-                    <img src={entities} width="400"/>
+                    <img src={entities} width="400" alt="Cover of Pathfinder Infinite: Entities"/>
                     <p>Fourteen mysterious entities beckon your player characters with power. With new bard muses, witch patron themes, a champion cause, an animist apparition, pactbinder feats, wizard focus spells, and covenants, 
                     who will you evoke the attention of? <a href="https://www.pathfinderinfinite.com/en/product/506194/entities" target="blank">Click here to see on Pathfinder Infinite</a></p>
                 </div>
-                
-                
+                    
             </div>
 
-            <h3>Games Ran</h3>
+            <h3>Games Ran:</h3>
             <div id="gamesRan">
                 <div className="gameSection section" >
                     <h4>Wardens of Wildwood</h4>
