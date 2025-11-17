@@ -69,3 +69,9 @@
     }
 }
 
+
+@media screen and (width < 390px) {
+    .overlay {
+        display: none;
+    }
+}
