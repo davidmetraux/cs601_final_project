@@ -34,7 +34,10 @@ https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
 - Maybe some page that creates some sort of game... like where bubbles will drift up the screen and you have to click them
 - Maybe some sort of starting-draw tester for Arkham Horror the Card Game, which I think I can get api for?
 
-
+# Things I want feedback on:
+- How much more should be added to the Pathfinder page to be satisfied
+- If you think Planned Work are good ideas
+- If you like the styling of the banner
 
 # Cool Notable Things:
 General:
