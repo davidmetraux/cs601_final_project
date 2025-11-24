@@ -18,14 +18,24 @@ const forecastBoston = 'https://api.weather.gov/gridpoints/BOX/72,90/forecast'
 function Weather(){
     const [weatherPeriods, setWeather] = useState<WeatherPeriod[]>()
     const [dataIsLoaded, setDataIsLoaded] = useState(false);
+    const [dataFailedToLoad, setDataFailedToLoad] = useState(false);
 
     useEffect(() => {
-        fetch(forecastBoston)
-            .then((res) => {return res.json()})
-            .then((json) => {
-                setWeather(json.properties.periods);
-                setDataIsLoaded(true);
-            });
+        async function getWeather(){
+            try {
+                const response = await fetch(forecastBoston)
+                if (!response.ok){
+                    setDataFailedToLoad(true)
+                } else {
+                    let json = await response.json()
+                    setWeather(json.properties.periods);
+                    setDataIsLoaded(true);
+                }
+            } catch (err) {
+                console.log(err)
+            }
+        }
+        getWeather()
     }, []);
 
     const getWeek = () => {
@@ -69,6 +79,7 @@ function Weather(){
         return (
             <div>
                 <h2>Boston Weather Loading</h2>
+                {dataFailedToLoad && <div>Data Failed To Load</div>}
             </div>
         );
     } else {
