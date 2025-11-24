@@ -17,6 +17,10 @@ https://www.w3schools.com/css/css3_buttons.asp
 Used for scrollbar styling:
 https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
 
+
+Weather API:
+https://www.weather.gov/documentation/services-web-api
+
 # Current Work:
 - Hosted on GitHub Pages
 - Uses React

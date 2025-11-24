@@ -3,16 +3,12 @@ import '../style/Banner.css'
 import headshot from '../media/headshot_no_bg.png'
 import { JSX } from 'react';
 import { Link } from "react-router";
+import { routes } from '../Routes';
 
-const links: {name: string, href: string}[]  = [
-    {name: "Test", href: "test"},
-    {name: "Pathfinder", href: "pathfinder"},
-    {name: "Weather Near David", href: "weather"},
-]
 
 function Banner(){
 
-    const listLinks: JSX.Element[] = links.map((link)=>{
+    const listLinks: JSX.Element[] = routes.map((link)=>{
         return <li key={link.href}><Link to={{pathname: link.href}} >{link.name}</Link></li>
     })
 
