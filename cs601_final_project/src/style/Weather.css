@@ -20,8 +20,13 @@ h2, h3 {
     margin-top: 0px;
 }
 
-.icon img {
+img {
     height: 100%;
+    
+}
+
+.icon {
+    order: 1; /*So looks nice without CSS*/
 }
 
 .dayInfo {
@@ -30,4 +35,5 @@ h2, h3 {
     align-items: flex-start;
     text-align: left;
     margin: 10px;
+    order: 2;
 }

@@ -54,9 +54,6 @@ function Weather(){
     const getDay = (period: WeatherPeriod) => {
         return (
             <>
-                <div className="icon">
-                    <img src={period.icon}  alt={period.detailedForecast}/>
-                </div>
                 <div className="dayInfo">
                     <div>
                         <h3>{period.name}</h3>
@@ -67,6 +64,9 @@ function Weather(){
                     <div>
                         {period.temperature} ° {period.temperatureUnit}
                     </div>
+                </div>
+                <div className="icon">
+                    <img width={100} src={period.icon}  alt={period.detailedForecast}/>
                 </div>
 
             </>
