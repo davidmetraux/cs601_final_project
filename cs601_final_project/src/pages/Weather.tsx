@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import "../style/Weather.css"
 
 interface WeatherPeriod {
     number: number;
@@ -26,7 +27,6 @@ function Weather(){
         fetch(forecastBoston)
             .then((res) => {return res.json()})
             .then((json) => {
-                debugger
                 setWeather(json.properties);
                 setDataIsLoaded(true);
             });
@@ -34,29 +34,35 @@ function Weather(){
 
     const getWeek = () => {
         let days = weatherProperties?.periods.map((period)=>{
-            return <li key={period.number}>{getDay(period)}</li>
+            return <div className="day" key={period.number}>{getDay(period)}</div>
         })
 
         return (
-            <ul>
+            <div className="weatherList">
                 {days}
-            </ul>
+            </div>
         )
     }
     
     const getDay = (period: WeatherPeriod) => {
         return (
-            <ul>
-                <li>
-                    {period.name}
-                </li>
-                <li>
-                    {period.shortForecast}
-                </li>
-                <li>
-                    {period.temperature} ° {period.temperatureUnit}
-                </li>
-            </ul>
+            <>
+                <div className="icon">
+                    <img src={period.icon}  />
+                </div>
+                <div className="dayInfo">
+                    <div>
+                        <h3>{period.name}</h3>
+                    </div>
+                    <div>
+                        {period.shortForecast}
+                    </div>
+                    <div>
+                        {period.temperature} ° {period.temperatureUnit}
+                    </div>
+                </div>
+
+            </>
         )
 
     }
@@ -66,14 +72,15 @@ function Weather(){
     if (!dataIsLoaded) {
         return (
             <div>
-                <h2>Boston Weather</h2>
-                <h1>Please wait some time....</h1>
+                <h2>Boston Weather Loading</h2>
             </div>
         );
     } else {
         return (
-            <div>
-                <h1>data loaded</h1>
+            <div className="background">
+                <h2>Boston Weather</h2>
+                <p>Source: <a href="https://www.weather.gov/documentation/services-web-api">https://www.weather.gov/documentation/services-web-api</a></p>
+                <div></div>
                 {getWeek()}
             </div>
         );
