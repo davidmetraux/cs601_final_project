@@ -4,9 +4,11 @@ import './style/App.css';
 import Banner from './components/Banner';
 import Pathfinder from './pages/Pathfinder';
 import MainContentWrapper from './components/MainContentWrapper';
+import Weather from './pages/Weather';
 
 import { Route, Routes } from "react-router";
 import { HashRouter } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
             />
             <Route path="/test" element={<div>test</div>} />
             <Route path="/pathfinder" element={<Pathfinder/>} />
+            <Route path="/weather" element={<Weather/>} />
           </Routes>
         </MainContentWrapper>
       </div>

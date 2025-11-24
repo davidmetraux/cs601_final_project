@@ -7,6 +7,7 @@ import { Link } from "react-router";
 const links: {name: string, href: string}[]  = [
     {name: "Test", href: "test"},
     {name: "Pathfinder", href: "pathfinder"},
+    {name: "Weather Near David", href: "weather"},
 ]
 
 function Banner(){
