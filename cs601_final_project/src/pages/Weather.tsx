@@ -11,29 +11,25 @@ interface WeatherPeriod {
     temperatureUnit: string
 }
 
-interface WeatherProperties {
-    periods: WeatherPeriod[]
-}
-
 
 
 const forecastBoston = 'https://api.weather.gov/gridpoints/BOX/72,90/forecast'
 
 function Weather(){
-    const [weatherProperties, setWeather] = useState<WeatherProperties>()
+    const [weatherPeriods, setWeather] = useState<WeatherPeriod[]>()
     const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
     useEffect(() => {
         fetch(forecastBoston)
             .then((res) => {return res.json()})
             .then((json) => {
-                setWeather(json.properties);
+                setWeather(json.properties.periods);
                 setDataIsLoaded(true);
             });
     }, []);
 
     const getWeek = () => {
-        let days = weatherProperties?.periods.map((period)=>{
+        let days = weatherPeriods?.map((period)=>{
             return <div className="day" key={period.number}>{getDay(period)}</div>
         })
 
@@ -48,7 +44,7 @@ function Weather(){
         return (
             <>
                 <div className="icon">
-                    <img src={period.icon}  />
+                    <img src={period.icon}  alt=""/>
                 </div>
                 <div className="dayInfo">
                     <div>
