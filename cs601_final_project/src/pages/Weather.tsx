@@ -44,7 +44,7 @@ function Weather(){
         return (
             <>
                 <div className="icon">
-                    <img src={period.icon}  alt=""/>
+                    <img src={period.icon}  alt={period.detailedForecast}/>
                 </div>
                 <div className="dayInfo">
                     <div>

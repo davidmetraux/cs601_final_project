@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import '../style/Banner.css'
 import headshot from '../media/headshot_no_bg.png'
 import { JSX } from 'react';
