@@ -25,13 +25,14 @@ function Weather(){
             try {
                 const response = await fetch(forecastBoston)
                 if (!response.ok){
-                    setDataFailedToLoad(true)
+                    throw new Error(`HTTP error! Status: ${response.status}`);
                 } else {
                     let json = await response.json()
                     setWeather(json.properties.periods);
                     setDataIsLoaded(true);
                 }
             } catch (err) {
+                setDataFailedToLoad(true)
                 console.log(err)
             }
         }
@@ -78,8 +79,7 @@ function Weather(){
     if (!dataIsLoaded) {
         return (
             <div>
-                <h2>Boston Weather Loading</h2>
-                {dataFailedToLoad && <div>Data Failed To Load</div>}
+                {dataFailedToLoad ? <h2>Data Failed To Load</h2> : <h2>Boston Weather Loading</h2>}
             </div>
         );
     } else {
