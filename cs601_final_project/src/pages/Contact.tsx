@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form';
-import '../style/Form.css'
+import style from '../style/Form.module.css'
 
 
 type Inputs = {
@@ -17,102 +17,100 @@ function Contact(){
         formState: { errors },
     } = useForm<Inputs>()
 
-    const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
+        setSubmitted(true)
+    }
 
 
     const[submitted, setSubmitted] = useState(false)
 
-    const nameValidator = (name: string) => { 
-        return (name.length) >= 2 && /^[A-Za-z]+$/.test(name)
-    }
 
-    const emailValidator = (email: string) => {
-        return /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d]))*$/i.test(email)
-    }
-
-
-    // const form = () => {
-    //     return (                
-    //             <form noValidate>
-    //                 <div>
-    //                     <label htmlFor='name'>Name</label>
-    //                     <input name="name" id="name" type="text"></input>
-    //                     <p className="error"></p>
-    //                 </div>
-    //                 <div>
-    //                     <label htmlFor='email'>Email</label>
-    //                     <input name="email" id="email" type="email"></input>
-    //                     <p className="error"></p>
-    //                 </div>
-    //                 <div>
-    //                     <label htmlFor='message'>Message</label>
-    //                     <textarea name="message" id="message" rows={5}></textarea>
-    //                     <p className="error"></p>
-    //                 </div>
-    //                 <button> Submit </button>
-    //             </form>
-    //     )
-    // }
     const form = () => {
         return (                
                 <form noValidate onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <label htmlFor='name'>Name</label>
-                        <input id="name" type="text" 
+                        <input id={style.name} type="text" 
                             {
                                 ...register(
                                     "name",
                                     {
-                                        required:true,
-                                        pattern: /^[A-Za-z]+$/,
-                                        min: 2
+                                        required:"Name is required",
+                                        pattern: 
+                                            { 
+                                                value:/^[a-z\s]+$/i,
+                                                message:"Name must use English alphabet"
+                                            },
+                                        minLength: 
+                                            {
+                                                value: 2,
+                                                message: "Must be two or more characters"
+                                            }   
                                     }
                                 )
                             }
                         />
-                        <span className="error"></span>
+                        <p className={style.error}>{errors.name?.message}</p> 
                     </div>
                     <div>
                         <label htmlFor='email'>Email</label>
-                        <input id="email" type="email" 
+                        <input id={style.email} type="email" 
                             {
                                 ...register(
                                     "email",
                                     {   
-                                        required:true,
-                                        pattern: /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d]))*$/i
+                                        required:"Email is required",
+                                        pattern: 
+                                            {
+                                                value: /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d]))*$/i,
+                                                message: "Must be valid email address"
+                                            } 
                                     }
                                 ) 
                             }
                         />
-                        <p className="error"></p>
+                        <p className={style.error}>{errors.email?.message}</p>
                     </div>
                     <div>
                         <label htmlFor='message'>Message</label>
-                        <textarea id="message" rows={5} 
+                        <textarea id={style.message} rows={5} 
                             {
                                 ...register(
                                     "message",
-                                    {
-                                        required: true,
-                                        min:10,
-                                        max: 100
-                                    }
+                                        {
+                                            required: "Message must be included",
+                                            minLength: 
+                                                { 
+                                                    value: 10,
+                                                    message: "Must be ten or more characters"
+                                                },
+                                            maxLength:
+                                                { 
+                                                    value: 230,
+                                                    message: "Must be less than or equal to 230 characters"
+                                                }
+                                        }
                                 )
                             }
                         />
-                        <p className="error"></p>
+                        <p className={style.error}>{errors.message?.message}</p>
                     </div>
-                    <button  type="submit"> Submit </button>
+                    <button type="submit" >Submit</button>
                 </form>
         )
     }
 
 
     return (
-        <div className='formRoot'>
+        <div className={style.formRoot}>
             <h2>Contact David</h2>
-            {submitted ? <div>Thank you for your message.</div> : form()}
+            {submitted ? 
+                <div>
+                    <p>Thank you, {watch().name}, for your message:</p>
+                    <p>{watch().message}</p>
+                    <p>We will get back to you at {watch().email} shortly.</p>
+                </div>
+                : form()}
         </div>
 
     )
