@@ -25,5 +25,8 @@ textarea, input {
 }
 
 .error {
-    color: red
+    color: rgb(55, 13, 13);
+    &::before {
+        content: '❌';
+    }
 }

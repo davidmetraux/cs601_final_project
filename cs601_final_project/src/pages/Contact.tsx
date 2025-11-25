@@ -50,7 +50,7 @@ function Contact(){
                                 )
                             }
                         />
-                        <p className={style.error}>{errors.name?.message}</p> 
+                         {errors.name && <p className={style.error}>{errors.name?.message}</p>}
                     </div>
                     <div>
                         <label htmlFor='email'>Email</label>
@@ -69,7 +69,7 @@ function Contact(){
                                 ) 
                             }
                         />
-                        <p className={style.error}>{errors.email?.message}</p>
+                        {errors.email && <p className={style.error}>{errors.email?.message}</p>}
                     </div>
                     <div>
                         <label htmlFor='message'>Message</label>
@@ -93,7 +93,7 @@ function Contact(){
                                 )
                             }
                         />
-                        <p className={style.error}>{errors.message?.message}</p>
+                        {errors.message && <p className={style.error}>{errors.message?.message}</p>}
                     </div>
                     <button type="submit" >Submit</button>
                 </form>
