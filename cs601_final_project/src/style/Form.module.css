@@ -28,6 +28,15 @@ textarea, input {
     width: 300px
 }
 
+@media screen and (width<400px) {
+    textarea, input {
+        width: calc(100% - 10px);
+    }
+
+    label {
+        width: 70px
+    }
+}
 
 
 .error {
@@ -45,4 +54,9 @@ textarea, input {
     background-color: rgb(132, 166, 230);
     border-radius: 5px;
     box-shadow: 5px 5px black;
+}
+
+.links {
+    list-style: none;
+    padding-left: 0;
 }
