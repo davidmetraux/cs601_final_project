@@ -1,5 +1,9 @@
 .formRoot {
     background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 
@@ -24,9 +28,21 @@ textarea, input {
     width: 300px
 }
 
+
+
 .error {
     color: rgb(55, 13, 13);
     &::before {
         content: '❌';
     }
+}
+
+.response, form {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(132, 166, 230);
+    border-radius: 5px;
+    box-shadow: 5px 5px black;
 }

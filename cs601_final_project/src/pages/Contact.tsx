@@ -105,7 +105,7 @@ function Contact(){
         <div className={style.formRoot}>
             <h2>Contact David</h2>
             {submitted ? 
-                <div>
+                <div className={style.response}>
                     <p>Thank you, {watch().name}, for your message:</p>
                     <p>{watch().message}</p>
                     <p>We will get back to you at {watch().email} shortly.</p>
