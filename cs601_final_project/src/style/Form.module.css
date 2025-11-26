@@ -1,3 +1,7 @@
+:root {
+    --form-element-width: 300px
+}
+
 .formRoot {
     background-color: cornflowerblue;
     display: flex;
@@ -8,9 +12,11 @@
 
 
 form {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-auto-columns: 1fr;
 }
 
 label {
@@ -24,13 +30,30 @@ textarea {
   resize: none;
 }
 
-textarea, input {
-    width: 300px
+.formElementWidth  {
+    width: var(--form-element-width);
+    &#urgent {
+        margin-left: 100px;
+        text-align: left;
+        input {
+            margin-left: 0;
+        }
+    }
+    &#reason{
+        width: calc(var(--form-element-width) + 8px)
+    }
 }
 
-@media screen and (width<400px) {
-    textarea, input {
+@media screen and (width<450px) {
+    .formElementWidth{
         width: calc(100% - 10px);
+        &#urgent {
+            margin-left: 70px;
+        }
+        &#reason{
+            /* width: calc(100%-2px); */
+            width: calc(100%);
+        }
     }
 
     label {
