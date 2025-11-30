@@ -201,7 +201,7 @@ function Contact(){
                 <div className={style.response}>
                     <p>Thank you, {watch().name}, for your message with the reason of {watch().reason}:</p>
                     <p>{watch().message}</p>
-                    <p>We will get back to you at {watch().email} {watch().urgent ? "immediately, since it's urgent" : "shortly"}. {watch().favorite != "other" && `Hopefully with a ${watch().favorite}.`}</p>
+                    <p>We will get back to you at {watch().email} {watch().urgent ? "immediately, since it's urgent" : "shortly"}. {watch().favorite !== "other" && `Hopefully with a ${watch().favorite}.`}</p>
                 </div>
                 : 
                 <><p>Or can otherwise contact him here:</p> {form()}</>}

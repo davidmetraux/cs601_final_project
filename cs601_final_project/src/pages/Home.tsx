@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 function Home() {
 
-    const homelessRoutes = routes.filter((route)=>{return route.name != "Home"})
+    const homelessRoutes = routes.filter((route)=>{return route.name !== "Home"})
 
     return (
         <div className={style.wrapper}>
