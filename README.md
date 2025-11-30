@@ -30,25 +30,16 @@ https://react-hook-form.com/get-started
 - Styled Banner with Image
 - Navigational Menu
 - React Router (Hash Router) for multiple pages
-- Default React Page
-- Test Page
+- Homepage that uses the same data as the navigational menu to get more details.
+- Page that fetches weather from boston
+- Page that gives some contact information and gives a dummy form with a variety of options
 - Page that uses Grid and Float that shows off a hobby of mine, Pathfinder
-
-# Planned Work:
-- Some sort of form, but am unsure how to do so because I don't plan on using an email server. Might just use it to calculate something. Maybe check if various social medias already has an account with a certain username?
-- Some sort of actual resume: Might just recreate my actual resume with the grid layout.
-- Some sort of contact page: Include social links. Maybe fetch recent linkedin posts or similar.
-- Maybe some page that creates some sort of game... like where bubbles will drift up the screen and you have to click them
-- Maybe some sort of starting-draw tester for Arkham Horror the Card Game, which I think I can get api for?
-
-# Things I want feedback on:
-- How much more should be added to the Pathfinder page to be satisfied
-- If you think Planned Work are good ideas
-- If you like the styling of the banner
+- Page that asynchronously fetches a json of my Resume from the public folder and formats it. 
 
 # Cool Notable Things:
 General:
 - Flex used very often
+- Grid used very often
 - website works without CSS
 - Works on mobile views down to ~350px
 - TypeScript used
@@ -61,4 +52,18 @@ Banner:
 Nav buttons are created by iterating through list
 
 Main-area wrapper:
-Scrollbar styled
+- Scrollbar styled
+
+Home Page: 
+- Populated with same data as the nav
+
+Pathfinder: 
+- Uses Grid and Float
+
+Boston Weather:
+- Fetches weather from API
+- Uses Grid
+
+Contact David:
+- Uses inputs, textarea, select, checkbox, and radio select
+- validates input accordingly, with errors appearing after submission and updating with further edits

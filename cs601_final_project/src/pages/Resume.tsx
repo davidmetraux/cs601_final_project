@@ -101,6 +101,8 @@ function Resume(){
                                 <p>{job.description}</p>
                                 <p>{job.startMonth} {job.startYear} - {job.endMonth} {job.endYear}</p>
                                 {feats(job.feats)}
+                                <p>Additional Work:</p>
+                                {details(job.additionalWork)}
                             </div>
                         )
                     })}
