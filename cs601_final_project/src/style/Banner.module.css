@@ -1,9 +1,4 @@
-@media print {
-  /* All your print styles go here */
-  #banner  {
-    display: none !important;
-  }
-}
+
 
 #banner {
     display: flex;
@@ -24,7 +19,7 @@
     z-index: 2;
     position: relative;
     border-radius: 10px;
-        box-shadow: 0px 3px 3px rgb(0,0,0,.5);
+    box-shadow: 0px 3px 3px rgb(0,0,0,.5);
     a {
         background-color: #61cefa;
         border: none;
@@ -35,6 +30,8 @@
         text-decoration: none;
         color:black;
         transition: 0.3s;
+        display: block;
+        height: fit-content;
     }
 
     a:hover {
@@ -81,4 +78,10 @@
     .overlay {
         display: none;
     }
+}
+
+@media print {
+  #banner  {
+    display: none;
+  }
 }
