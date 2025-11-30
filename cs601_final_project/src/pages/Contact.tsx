@@ -33,7 +33,7 @@ function Contact(){
                 <form noValidate onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <label htmlFor='name'>Name</label>
-                        <input className={style.formElementWidth} id={style.name} type="text" 
+                        <input className={style.formElementWidth} id="name" type="text" autoComplete='true'
                             {
                                 ...register(
                                     "name",
@@ -57,7 +57,7 @@ function Contact(){
                     </div>
                     <div>
                         <label htmlFor='email'>Email</label>
-                        <input className={style.formElementWidth} id={style.email} type="email" 
+                        <input className={style.formElementWidth} id="email" type="email" autoComplete='true'
                             {
                                 ...register(
                                     "email",
@@ -76,7 +76,7 @@ function Contact(){
                     </div>
                     <div>
                         <label htmlFor='message'>Message</label>
-                        <textarea className={style.formElementWidth} id={style.message} rows={5} 
+                        <textarea className={style.formElementWidth} id="message" rows={5} 
                             {
                                 ...register(
                                     "message",
@@ -100,7 +100,7 @@ function Contact(){
                     </div>
                     <div>
                         <label htmlFor='reason'>Reason</label>
-                            <select  className={style.formElementWidth} id={style.reason}
+                            <select  className={style.formElementWidth} id="reason"
                                 {
                                     ...register(
                                         "reason",
@@ -123,8 +123,8 @@ function Contact(){
                     </div>
                     <div>
                         <label htmlFor='urgent'>Urgent</label>
-                        <div className={style.formElementWidth} id={style.urgent}>
-                            <input type='checkbox'
+                        <div className={`${style.formElementWidth} ${style.checkboxContainer}`} id={style.urgent}>
+                            <input type='checkbox' id="urgent"
                                 {
                                     ...register(
                                         "urgent"
@@ -140,7 +140,7 @@ function Contact(){
 
                             <label htmlFor='dog'>Dog</label>
                             <div className={style.formElementWidth} >
-                                <input type='radio' value="dog" 
+                                <input type='radio' value="dog" id="dog"
                                     {
                                         ...register(
                                             "favorite"
@@ -150,7 +150,7 @@ function Contact(){
                             </div>
                              <label htmlFor='cat'>Cat</label>
                             <div className={style.formElementWidth}>
-                                <input type='radio' value="cat"
+                                <input type='radio' value="cat" id="cat"
                                     {
                                         ...register(
                                             "favorite"
@@ -160,7 +160,7 @@ function Contact(){
                             </div>
                              <label htmlFor='spider'>Spider</label>
                             <div className={style.formElementWidth}>
-                                <input type='radio' value="spider"
+                                <input type='radio' value="spider" id="spider"
                                     {
                                         ...register(
                                             "favorite"
@@ -170,7 +170,7 @@ function Contact(){
                             </div>
                             <label htmlFor='other'>Other</label>
                             <div className={style.formElementWidth}>
-                                <input type='radio' value="other"
+                                <input type='radio' value="other" id="other"
                                     {
                                         ...register(
                                             "favorite"

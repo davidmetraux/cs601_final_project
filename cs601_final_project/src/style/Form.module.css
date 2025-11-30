@@ -32,28 +32,29 @@ textarea {
 
 .formElementWidth  {
     width: var(--form-element-width);
-    &#urgent {
+    &.checkboxContainer  {
         margin-left: 100px;
         text-align: left;
         input {
             margin-left: 0;
         }
     }
-    &#reason{
-        width: calc(var(--form-element-width) + 8px)
-    }
+}
+
+select.formElementWidth {
+    width: calc(var(--form-element-width) + 8px)
 }
 
 @media screen and (width<450px) {
     .formElementWidth{
         width: calc(100% - 10px);
-        &#urgent {
+        &.checkboxContainer {
             margin-left: 70px;
         }
-        &#reason{
-            /* width: calc(100%-2px); */
-            width: calc(100%);
-        }
+    }
+
+    select.formElementWidth {
+        width: calc(100%);
     }
 
     label {
