@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cs601_final_project/static/css/main.9a7455cb.css",
-    "main.js": "/cs601_final_project/static/js/main.2a2192ed.js",
+    "main.js": "/cs601_final_project/static/js/main.05aaf734.js",
     "static/js/453.64647bcb.chunk.js": "/cs601_final_project/static/js/453.64647bcb.chunk.js",
     "static/media/headshot_no_bg.png": "/cs601_final_project/static/media/headshot_no_bg.4fe1ff8f8d988dc16e37.png",
     "static/media/entities.png": "/cs601_final_project/static/media/entities.3d360c3a9adbd6564e50.png",
@@ -11,11 +11,11 @@
     "static/media/Fall_of_Plaguestone.png": "/cs601_final_project/static/media/Fall_of_Plaguestone.dbe559f4b94450ef9731.png",
     "index.html": "/cs601_final_project/index.html",
     "main.9a7455cb.css.map": "/cs601_final_project/static/css/main.9a7455cb.css.map",
-    "main.2a2192ed.js.map": "/cs601_final_project/static/js/main.2a2192ed.js.map",
+    "main.05aaf734.js.map": "/cs601_final_project/static/js/main.05aaf734.js.map",
     "453.64647bcb.chunk.js.map": "/cs601_final_project/static/js/453.64647bcb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9a7455cb.css",
-    "static/js/main.2a2192ed.js"
+    "static/js/main.05aaf734.js"
   ]
 }
