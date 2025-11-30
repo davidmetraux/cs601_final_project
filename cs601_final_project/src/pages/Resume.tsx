@@ -40,7 +40,8 @@ function Resume(){
                     if (!response.ok){
                          throw new Error(`HTTP error! Status: ${response.status}`);
                     } else {
-                        const resume = await  response.json()
+                        const resume = await response.json()
+                        alert("resume obtained")
                         console.log(resume)
                     }
 
