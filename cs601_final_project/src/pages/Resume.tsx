@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 
 interface Job {
     company: string,
@@ -28,6 +29,30 @@ interface Education {
 
 
 function Resume(){
+    const [resume, setResume] = useState()
+
+    useEffect(
+        
+    ()=>{ 
+            async function getResume(){
+                try {
+                    const response = await fetch("resume.json")
+                    if (!response.ok){
+                         throw new Error(`HTTP error! Status: ${response.status}`);
+                    } else {
+                        const resume = await  response.json()
+                        debugger
+                    }
+
+                } catch (err) {
+                    console.log(err)
+                }
+                
+            }
+            getResume();
+        }
+
+    ,[])
 
     const summary = (summary: string) => {
         return (
