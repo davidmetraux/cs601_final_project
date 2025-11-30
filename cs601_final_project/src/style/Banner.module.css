@@ -1,3 +1,10 @@
+@media print {
+  /* All your print styles go here */
+  #banner  {
+    display: none !important;
+  }
+}
+
 #banner {
     display: flex;
     flex-direction: column;

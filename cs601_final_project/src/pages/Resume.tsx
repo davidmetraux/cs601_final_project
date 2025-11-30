@@ -152,6 +152,7 @@ function Resume(){
                     {skills(resume.skills.programmingLanguages, resume.skills.frameworksLibraries, resume.skills.programmingLanguages)}
                     {professionalExperience(resume.professionalExperience)}
                     {education(resume.education)}
+                    <button onClick={()=>window.print()}>Print Resume</button>
                 </div>
             )
         } else {
