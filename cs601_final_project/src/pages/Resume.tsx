@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import style from "../style/Resume.module.css"
 
-interface Resume {
+interface ResumeType {
     summary: string,
     skills: {
         programmingLanguages: string,
@@ -41,7 +41,7 @@ interface Education {
 
 
 function Resume(){
-    const [resume, setResume] = useState<Resume>()
+    const [resume, setResume] = useState<ResumeType>()
 
     useEffect(
         
@@ -143,7 +143,7 @@ function Resume(){
             })}
         </div>
     
-    const output = (resume: Resume | undefined)=>{
+    const output = (resume: ResumeType | undefined)=>{
         if (resume){
             return (
                 <div id={style.resume}>
