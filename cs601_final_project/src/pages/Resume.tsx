@@ -41,7 +41,7 @@ function Resume(){
                          throw new Error(`HTTP error! Status: ${response.status}`);
                     } else {
                         const resume = await  response.json()
-                        debugger
+                        console.log(resume)
                     }
 
                 } catch (err) {
