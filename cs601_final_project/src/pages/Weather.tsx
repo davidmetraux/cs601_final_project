@@ -18,14 +18,25 @@ const forecastBoston = 'https://api.weather.gov/gridpoints/BOX/72,90/forecast'
 function Weather(){
     const [weatherPeriods, setWeather] = useState<WeatherPeriod[]>()
     const [dataIsLoaded, setDataIsLoaded] = useState(false);
+    const [dataFailedToLoad, setDataFailedToLoad] = useState(false);
 
     useEffect(() => {
-        fetch(forecastBoston)
-            .then((res) => {return res.json()})
-            .then((json) => {
-                setWeather(json.properties.periods);
-                setDataIsLoaded(true);
-            });
+        async function getWeather(){
+            try {
+                const response = await fetch(forecastBoston)
+                if (!response.ok){
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                } else {
+                    let json = await response.json()
+                    setWeather(json.properties.periods);
+                    setDataIsLoaded(true);
+                }
+            } catch (err) {
+                setDataFailedToLoad(true)
+                console.log(err)
+            }
+        }
+        getWeather()
     }, []);
 
     const getWeek = () => {
@@ -43,9 +54,6 @@ function Weather(){
     const getDay = (period: WeatherPeriod) => {
         return (
             <>
-                <div className="icon">
-                    <img src={period.icon}  alt=""/>
-                </div>
                 <div className="dayInfo">
                     <div>
                         <h3>{period.name}</h3>
@@ -56,6 +64,9 @@ function Weather(){
                     <div>
                         {period.temperature} ° {period.temperatureUnit}
                     </div>
+                </div>
+                <div className="icon">
+                    <img width={100} src={period.icon}  alt={period.detailedForecast}/>
                 </div>
 
             </>
@@ -68,7 +79,7 @@ function Weather(){
     if (!dataIsLoaded) {
         return (
             <div>
-                <h2>Boston Weather Loading</h2>
+                {dataFailedToLoad ? <h2>Data Failed To Load</h2> : <h2>Boston Weather Loading</h2>}
             </div>
         );
     } else {

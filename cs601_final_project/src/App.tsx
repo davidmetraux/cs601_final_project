@@ -1,13 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './style/App.css';
 import Banner from './components/Banner';
-import Pathfinder from './pages/Pathfinder';
 import MainContentWrapper from './components/MainContentWrapper';
-import Weather from './pages/Weather';
+import {  routes } from './Routes';
 
 import { Route, Routes } from "react-router";
 import { HashRouter } from 'react-router-dom';
+
 
 
 function App() {
@@ -17,25 +16,9 @@ function App() {
         <header><Banner></Banner></header>
         <MainContentWrapper>
           <Routes>
-            <Route path="/" element={
-              <div className="App-body">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                  Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                  className="App-link"
-                  href="https://reactjs.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Learn React
-                </a>
-              </div>} 
-            />
-            <Route path="/test" element={<div>test</div>} />
-            <Route path="/pathfinder" element={<Pathfinder/>} />
-            <Route path="/weather" element={<Weather/>} />
+            { routes.map((route)=>{
+              return <Route path={route.href} element={route.component}/>
+            })}
           </Routes>
         </MainContentWrapper>
       </div>

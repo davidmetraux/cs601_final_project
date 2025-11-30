@@ -1,0 +1,85 @@
+:root {
+    --form-element-width: 300px
+}
+
+.formRoot {
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+
+form {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    display: grid;
+    grid-auto-columns: 1fr;
+}
+
+label {
+    width: 100px;
+    display: block;
+    float: left;
+    text-align: left;
+}
+
+textarea {
+  resize: none;
+}
+
+.formElementWidth  {
+    width: var(--form-element-width);
+    &#urgent {
+        margin-left: 100px;
+        text-align: left;
+        input {
+            margin-left: 0;
+        }
+    }
+    &#reason{
+        width: calc(var(--form-element-width) + 8px)
+    }
+}
+
+@media screen and (width<450px) {
+    .formElementWidth{
+        width: calc(100% - 10px);
+        &#urgent {
+            margin-left: 70px;
+        }
+        &#reason{
+            /* width: calc(100%-2px); */
+            width: calc(100%);
+        }
+    }
+
+    label {
+        width: 70px
+    }
+}
+
+
+.error {
+    color: rgb(55, 13, 13);
+    &::before {
+        content: '❌';
+    }
+}
+
+.response, form {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(132, 166, 230);
+    border-radius: 5px;
+    box-shadow: 5px 5px black;
+}
+
+.links {
+    list-style: none;
+    padding-left: 0;
+}

@@ -1,29 +1,24 @@
-import { Button } from '@mui/material';
-import '../style/Banner.css'
+import styles from '../style/Banner.module.css'
 import headshot from '../media/headshot_no_bg.png'
 import { JSX } from 'react';
 import { Link } from "react-router";
+import { routes } from '../Routes';
 
-const links: {name: string, href: string}[]  = [
-    {name: "Test", href: "test"},
-    {name: "Pathfinder", href: "pathfinder"},
-    {name: "Weather Near David", href: "weather"},
-]
 
 function Banner(){
 
-    const listLinks: JSX.Element[] = links.map((link)=>{
+    const listLinks: JSX.Element[] = routes.map((link)=>{
         return <li key={link.href}><Link to={{pathname: link.href}} >{link.name}</Link></li>
     })
 
     return (
-    <div id='banner'>
+    <div id={styles.banner}>
         
-            <div id='siteTitle'>
-                <Link to={{pathname: ""}} className='titleLayer'>
+            <div id={styles.siteTitle}>
+                <Link to={{pathname: ""}} className={styles.titleLayer}>
                     <h1>David Metraux</h1>
-                    <div id="headShot">
-                        <div className='overlay'></div>
+                    <div id={styles.headShot}>
+                        <div className={styles.overlay}></div>
                         <img  height="120" alt='headshot of David Metraux, man with long hair and beard' src={headshot}></img>
                     </div>
                 </Link>
@@ -31,7 +26,7 @@ function Banner(){
 
 
         <div>
-            <menu id='menu'>
+            <menu id={styles.menu}>
                 {listLinks}
 
             </menu>
