@@ -79,6 +79,8 @@ function Resume(){
         )
     }
 
+    const requiresMultipleSections = ( array : any[]) => array.length > 1 ? style.section : style.alone
+
     const skills = (programmingLanguages: string, frameworksLibraries: string, other: string)=>{
         return (
             <div className={style.section}>
@@ -95,7 +97,7 @@ function Resume(){
                     <h3>Professional Experience</h3>
                     {jobs.map((job)=>{
                         return (
-                            <div key={job.company+job.startMonth+job.endYear}>
+                            <div className={requiresMultipleSections(jobs)} key={job.company+job.startMonth+job.endYear}>
                                 <h4>{job.role}</h4>
                                 <p>{job.company}</p>
                                 <p>{job.description}</p>
@@ -132,10 +134,10 @@ function Resume(){
             <h3>Education</h3>
             {educations.map((education)=>{
                 return (
-                    <div key={education.degree+education.endYear}>
-                        <p>{education.degree}</p>
+                    <div className={requiresMultipleSections(educations)}  key={education.degree+education.endYear}>
+                        <h4>{education.degree}</h4>
                         <p>{education.major}</p>
-                        <p>{education.endMonth} {education.endYear}</p>
+                        <p>Graduated: {education.endMonth} {education.endYear}</p>
                         <p>{education.feat}</p>
                         <p>{education.institution}, {education.location}</p>
                     </div>
@@ -147,7 +149,7 @@ function Resume(){
         if (resume){
             return (
                 <div id={style.resume}>
-                    <h2>Resume</h2>
+                    <h2>David Metraux's Resume</h2>
                     {summary(resume.summary)}
                     {skills(resume.skills.programmingLanguages, resume.skills.frameworksLibraries, resume.skills.programmingLanguages)}
                     {professionalExperience(resume.professionalExperience)}
