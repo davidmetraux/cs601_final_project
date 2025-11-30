@@ -1,4 +1,16 @@
 import { useEffect, useState } from "react"
+import style from "../style/Resume.module.css"
+
+interface Resume {
+    summary: string,
+    skills: {
+        programmingLanguages: string,
+        frameworksLibraries: string,
+        other: string
+    },
+    professionalExperience: Job[],
+    education: Education[]
+}
 
 interface Job {
     company: string,
@@ -29,20 +41,23 @@ interface Education {
 
 
 function Resume(){
-    const [resume, setResume] = useState()
+    const [resume, setResume] = useState<Resume>()
 
     useEffect(
         
     ()=>{ 
             async function getResume(){
                 try {
-                    const response = await fetch("resume.json")
+
+                    // checking if running locally or not
+                    // eslint-disable-next-line no-restricted-globals
+                    const url = location.hostname === "localhost" ? "http://localhost:3000/cs601_final_project/resume.json" : "resume.json"
+                    const response = await fetch(url)
                     if (!response.ok){
                          throw new Error(`HTTP error! Status: ${response.status}`);
                     } else {
                         const resume = await response.json()
-                        alert("resume obtained")
-                        console.log(resume)
+                        setResume(resume)
                     }
 
                 } catch (err) {
@@ -57,7 +72,7 @@ function Resume(){
 
     const summary = (summary: string) => {
         return (
-            <div>
+            <div className={style.section}>
                 <h3>Summary</h3>
                 <p>{summary}</p>
             </div>
@@ -66,7 +81,7 @@ function Resume(){
 
     const skills = (programmingLanguages: string, frameworksLibraries: string, other: string)=>{
         return (
-            <div>
+            <div className={style.section}>
                 <h3>Skills</h3>
                 <p>Programming Languages: {programmingLanguages}</p>
                 <p>Frameworks/Libraries: {frameworksLibraries}</p>
@@ -76,7 +91,7 @@ function Resume(){
     }
 
     const professionalExperience = (jobs: Job[]) => 
-                <div>
+                <div className={style.section}>
                     <h3>Professional Experience</h3>
                     {jobs.map((job)=>{
                         return (
@@ -111,7 +126,7 @@ function Resume(){
         </ul>
 
     const education = (educations: Education[]) =>
-        <div>
+        <div className={style.section}>
             <h3>Education</h3>
             {educations.map((education)=>{
                 return (
@@ -126,9 +141,25 @@ function Resume(){
             })}
         </div>
     
+    const output = (resume: Resume | undefined)=>{
+        if (resume){
+            return (
+                <div id={style.resume}>
+                    <h2>Resume</h2>
+                    {summary(resume.summary)}
+                    {skills(resume.skills.programmingLanguages, resume.skills.frameworksLibraries, resume.skills.programmingLanguages)}
+                    {professionalExperience(resume.professionalExperience)}
+                    {education(resume.education)}
+                </div>
+            )
+        } else {
+            return (<div>Loading Resume</div>)
+        }
+
+    }
 
     return (
-        <div>Resume Page</div>
+        (output(resume))
     )
 }
 
