@@ -1,0 +1,88 @@
+{
+    "summary": "Results-oriented software developer with four years of professional experience. Proficient with many JavaScript frameworks, and has employed cutting-edge CSS modules, such as the container module. Excellent communicator who has worked with several different clients, both internal and external.",
+    "skills": {
+        "programmingLanguages": "JavaScript/TypeScript; Python; Java",
+        "frameworksLibraries": "Vue; React; Angular; Django; MUI",
+        "other": "PostgreSQL; Flexbox; CSS; HTML; Image Editing"
+    },
+    "professionalExperience": [
+        {
+            "company": "Instrumental Software Technologies, Inc. (ISTI)",
+            "description": "A geophysical software company that serves government and corporate interests",
+            "role":"Software Developer",
+            "startMonth": "June",
+            "endMonth": "June",
+            "startYear": 2020,
+            "endYear": 2024,
+            "feats": [
+                {
+                    "description": "Redesign of ISTI’s Former Main Website",
+                    "details": [
+                        "Transferred information from previous WordPress site to current Squarespace site",
+                        "Enhanced with custom functionality using JavaScript and CSS"
+                    ]
+                },
+                {
+                    "description": "QuakeMap/Web CISN Display - a web frontend to alert first responders of seismic events",
+                    "details": [
+                        "Styled and edited a web frontend to make it more responsive and fit specifications",
+                        "Learned and used new tools, including the CSS container module"
+                    ]
+                },
+                {
+                    "description": "ISTI Earthquake Portal - a project designed to show and map seismic events",
+                    "details": [
+                        "Implemented a responsive and reactive frontend that fit a variety of client needs",
+                        "Reformatted most of the components to use the CSS flex module"
+                    ]
+                },
+                {
+                    "description": "StationXML - documentation for a data format (https://stationxml-doc.readthedocs.io/)",
+                    "details": [
+                        "Formatted and revised StationXML documentation with XML, Python",
+                        "Added functionality to both the website and pdf with JavaScript, XML"
+                    ]
+                },
+                {
+                    "description": "ISTI Skills Database - an internal employee and prospective employee database/site",
+                    "details": [
+                        "Setup a database and created a website with the Django Web Framework",
+                        "Devised a functionality of many forms and filters using JavaScript and Python"
+                    ]
+                },
+                {
+                    "description": "Yasmine (Yet Another Station Metadata INformation Editor)",
+                    "details": [
+                        "Linked functionality from the ExtJS frontend and Python backend",
+                        "Resolved a variety of issues and implemented desired functions"
+                    ]
+                }
+            ],
+            "additionalWork" : [
+                "Managed ISTI Grafana - a tool used to monitor and graph various systems",
+                "Transferred a website frontend from ExtJs to Angular with TypeScript"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science Degree",
+            "endMonth": "June",
+            "endYear": 2020,
+            "major": "Double Major: Computer Science and Biology",
+            "institution": "Union College",
+            "location": "Schenectady, NY",
+            "feat": "Magna Cum Laude"
+        },
+        {
+            "degree": "Master of Science Degree",
+            "endMonth": "June",
+            "endYear": 2026,
+            "major": "Software Development",
+            "institution": "Boston University, MET College",
+            "location": "Boston, MA",
+            "feat": ""
+        }
+
+    ]
+}
