@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cs601_final_project/static/css/main.b74df5de.css",
-    "main.js": "/cs601_final_project/static/js/main.54126e88.js",
+    "main.css": "/cs601_final_project/static/css/main.876ba766.css",
+    "main.js": "/cs601_final_project/static/js/main.29f20100.js",
     "static/js/453.64647bcb.chunk.js": "/cs601_final_project/static/js/453.64647bcb.chunk.js",
     "static/media/headshot_no_bg.png": "/cs601_final_project/static/media/headshot_no_bg.4fe1ff8f8d988dc16e37.png",
     "static/media/entities.png": "/cs601_final_project/static/media/entities.3d360c3a9adbd6564e50.png",
@@ -10,12 +10,12 @@
     "static/media/March_of_the_Dead.png": "/cs601_final_project/static/media/March_of_the_Dead.96370bcf1e5269425ab9.png",
     "static/media/Fall_of_Plaguestone.png": "/cs601_final_project/static/media/Fall_of_Plaguestone.dbe559f4b94450ef9731.png",
     "index.html": "/cs601_final_project/index.html",
-    "main.b74df5de.css.map": "/cs601_final_project/static/css/main.b74df5de.css.map",
-    "main.54126e88.js.map": "/cs601_final_project/static/js/main.54126e88.js.map",
+    "main.876ba766.css.map": "/cs601_final_project/static/css/main.876ba766.css.map",
+    "main.29f20100.js.map": "/cs601_final_project/static/js/main.29f20100.js.map",
     "453.64647bcb.chunk.js.map": "/cs601_final_project/static/js/453.64647bcb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b74df5de.css",
-    "static/js/main.54126e88.js"
+    "static/css/main.876ba766.css",
+    "static/js/main.29f20100.js"
   ]
 }
