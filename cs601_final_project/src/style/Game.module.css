@@ -1,10 +1,26 @@
 .squareHolder {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    gap: 10px;
+    margin: auto;
+
     > div {
         width: 100px;
         height: 100px;
+        transition: 0.3s;
+        box-sizing: border-box;
+        border-radius: 5px;
     }
+}
+
+.gameHolder {
+    border : 1px solid black;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: thistle;
 }
 
 #red {
@@ -21,4 +37,17 @@
 
 #blue {
     background-color: blue;
+}
+
+.current {
+    border: 5px solid black;
+}
+
+.hint {
+    border: 10px solid rgb(200, 118, 205);
+}
+
+.background {
+    height: 100%;
+    background-color: wheat;
 }
