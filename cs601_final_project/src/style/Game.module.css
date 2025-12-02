@@ -1,0 +1,24 @@
+.squareHolder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    > div {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#blue {
+    background-color: blue;
+}
