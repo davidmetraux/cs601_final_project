@@ -1,51 +1,60 @@
-import { useRef, MouseEvent, RefObject, useState, useEffect } from "react"
+import { MouseEvent, useState, useEffect} from "react"
 import style from '../style/Game.module.css'
 
 function Game(){
-    const redRef = useRef<HTMLDivElement>(null)
-    const greenRef = useRef<HTMLDivElement>(null)
-    const yellowRef = useRef<HTMLDivElement>(null)
-    const blueRef = useRef<HTMLDivElement>(null)
-
     
-
     const [currentAnswer, setCurrentAnswer] = useState<string>()
-    const [currentRef, setCurrentRef] = useState<RefObject<HTMLDivElement|null>>()
+    const [wrong, setWrong] = useState(false)
     const [score, setScore] = useState<number>(0)
+    const [difficulty, setDifficulty] = useState<string>("easy")
+    const [colors, setColors] = useState<string[]>()
+
+    useEffect(()=>{
+        let numberOfColors;
+        if (difficulty === "easy"){
+            numberOfColors = 4;
+        } else if (difficulty === "medium"){
+            numberOfColors = 6;
+        } else {
+            numberOfColors = 8
+        }
+
+        let toSet=["red", "green", "yellow", "blue", "purple", "white", "orange", "grey"].slice(0, numberOfColors)
+
+        setColors(toSet)
+        setScore(0)
+        setWrong(false)
+    },[difficulty])
+
 
     const checkIfRightOne = (event: MouseEvent<HTMLElement>, color:string) => {
         if (color === currentAnswer){
             setScore(score+1)
             
         } else {
-            currentRef?.current && setIfValid(currentRef?.current, style.hint)
+            setWrong(true)
         }
     }
 
-    const setIfValid = (props: HTMLDivElement | null, style: string) => {
-        if (props != null) {
-            props.className = style
+    const isCurrent = (color: string) => {
+        if (color === currentAnswer){
+            if (wrong) {
+                return style.hint
+            } else {
+                return style.current
+            } 
         }
     }
 
     useEffect(()=>{
-        let allRefs = {red: redRef, green: greenRef, yellow:yellowRef, blue:blueRef}
-
-
-        // eslint-disable-next-line array-callback-return
-        Object.values(allRefs).map((ref) => {
-            setIfValid(ref.current, "")
-        })
-
-
-        let randomIndex = Math.floor(Math.random() * 4)
-        let answer= Object.entries(allRefs)[randomIndex]
-        setCurrentAnswer(answer[0])
-         if(answer[1]) {setCurrentRef(answer[1])}
-        let element = answer?.[1]
-
-        setIfValid(element.current, style.current)
-    }, [score])
+        if (colors){
+            setWrong(false)
+        
+            let randomIndex = Math.floor(Math.random() * colors.length)
+            let answer= colors[randomIndex]
+            setCurrentAnswer(answer)
+        }
+    }, [colors, score])
 
 
 
@@ -55,13 +64,19 @@ function Game(){
             <h2>Game</h2>
             <p>David Metraux likes playing games, so he made one here. Click the correct square. If you fail, you'll get a hint!</p>
             <div className={style.gameHolder}>
-                <h3>{currentAnswer && currentAnswer}</h3>
+                <button onClick={()=>setDifficulty("easy")}>Easy</button>
+                <button onClick={()=>setDifficulty("medium")}>Medium</button>
+                <button onClick={()=>setDifficulty("hard")}>Hard</button>
+                <p>Difficulty: {difficulty}</p>
                 <p>Score: {score}</p>
+                <h3>{currentAnswer && currentAnswer}</h3>
                 <div className={style.squareHolder}>
-                    <div id={style.red} ref={redRef} onClick={(e)=>checkIfRightOne(e, "red")}></div>
-                    <div id={style.green} ref={greenRef} onClick={(e)=>checkIfRightOne(e, "green")}></div>
-                    <div id={style.yellow} ref={yellowRef} onClick={(e)=>checkIfRightOne(e, "yellow")}></div>
-                    <div id={style.blue} ref={blueRef} onClick={(e)=>checkIfRightOne(e, "blue")}></div>
+                    {
+                        colors && colors.map((color)=>{ 
+                            return (
+                            <div key="color" id={style[color]} className={isCurrent(color)} onClick={(e)=>{checkIfRightOne(e, color)}}>
+                            </div>
+                    )})}
                 </div>
             </div>
         </div>

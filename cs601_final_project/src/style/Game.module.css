@@ -39,6 +39,22 @@
     background-color: blue;
 }
 
+#orange {
+    background-color: orange;
+}
+
+#white {
+    background-color: white;
+}
+
+#purple {
+    background-color: purple;
+}
+
+#grey {
+    background-color:grey
+}
+
 .current {
     border: 5px solid black;
 }
