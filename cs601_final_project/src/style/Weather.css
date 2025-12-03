@@ -37,3 +37,7 @@ img {
     margin: 10px;
     order: 2;
 }
+
+a {
+    word-break:break-all;
+}
