@@ -32,7 +32,8 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+
+@media screen and (max-width: 820px) {
     #gamesRan{
         grid-template-columns: 1fr;
     }
@@ -42,23 +43,5 @@
         width: 100%
     }
 }
-
-/* #gamesRan{
-    .gameSection{
-        :nth-child(1) {
-            grid-area: one;
-        }
-        :nth-child(2) {
-            grid-area: two;
-        }
-        :nth-child(3) {
-            grid-area: three;
-        }
-        :nth-child(4) {
-            grid-area: four;
-        }
-
-    }
-} */
 
 

@@ -67,14 +67,15 @@ function Game(){
                 <button onClick={()=>setDifficulty("easy")}>Easy</button>
                 <button onClick={()=>setDifficulty("medium")}>Medium</button>
                 <button onClick={()=>setDifficulty("hard")}>Hard</button>
-                <p>Difficulty: {difficulty}</p>
+                <p className={style.capitalize}>Difficulty: {difficulty}</p>
                 <p>Score: {score}</p>
-                <h3>{currentAnswer && currentAnswer}</h3>
+                <h3 className={style.capitalize}>Click On: {currentAnswer && currentAnswer}</h3>
                 <div className={style.squareHolder}>
                     {
                         colors && colors.map((color)=>{ 
                             return (
-                            <div key="color" id={style[color]} className={isCurrent(color)} onClick={(e)=>{checkIfRightOne(e, color)}}>
+                            <div key={color} id={style[color]} className={isCurrent(color)} onClick={(e)=>{checkIfRightOne(e, color)}}>
+                                <p className={style.colorNameForNoCSS}>{color}</p>
                             </div>
                     )})}
                 </div>
