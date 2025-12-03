@@ -21,6 +21,27 @@
     padding: 20px;
     border-radius: 5px;
     background-color: thistle;
+    button {
+        background-color: #dd90e0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 30px;
+        padding: 10px;
+        text-decoration: none;
+        color:black;
+        transition: 0.3s;
+        height: fit-content;
+        margin: 3px;
+    }
+
+    button:hover {
+        background-color: rgb(160, 95, 153);
+    }
+
+    button:active {
+        background-color: #dd90e0;
+    }
 }
 
 #red {
