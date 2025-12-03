@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "../style/Weather.css"
+import style from "../style/Weather.module.css"
 
 interface WeatherPeriod {
     number: number;
@@ -41,11 +41,11 @@ function Weather(){
 
     const getWeek = () => {
         let days = weatherPeriods?.map((period)=>{
-            return <div className="day" key={period.number}>{getDay(period)}</div>
+            return <div className={style.day} key={period.number}>{getDay(period)}</div>
         })
 
         return (
-            <div className="weatherList">
+            <div className={style.weatherList}>
                 {days}
             </div>
         )
@@ -54,7 +54,7 @@ function Weather(){
     const getDay = (period: WeatherPeriod) => {
         return (
             <>
-                <div className="dayInfo">
+                <div className={style.dayInfo}>
                     <div>
                         <h3>{period.name}</h3>
                     </div>
@@ -65,7 +65,7 @@ function Weather(){
                         {period.temperature} ° {period.temperatureUnit}
                     </div>
                 </div>
-                <div className="icon">
+                <div className={style.icon}>
                     <img width={100} src={period.icon}  alt={period.detailedForecast}/>
                 </div>
 
@@ -84,7 +84,7 @@ function Weather(){
         );
     } else {
         return (
-            <div className="background">
+            <div className={style.background}>
                 <h2>Boston Weather</h2>
                 <p>Source: <a href="https://www.weather.gov/documentation/services-web-api">https://www.weather.gov/documentation/services-web-api</a></p>
                 <div></div>

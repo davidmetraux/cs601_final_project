@@ -1,4 +1,4 @@
-import "../style/Pathfinder.css"
+import style from "../style/Pathfinder.module.css"
 import wardens from '../media/900px-Wardens_of_Wildwood_logo.png'
 import plaguestone from '../media/Fall_of_Plaguestone.png'
 import march from '../media/March_of_the_Dead.png'
@@ -7,14 +7,14 @@ import entities from "../media/entities.png"
 
 function Pathfinder(){
     return (
-        <div className="root">
-            <div className="section" style={{paddingTop:"0px"}}>
+        <div className={style.root}>
+            <div className={style.section} style={{paddingTop:"0px"}}>
                 <h2>Pathfinder 2e</h2>
                 <p>Pathfinder 2e is a cooperative tabletop roleplaying game that lets you build stories and adventures with your friends. 
                 David Metraux has played this a lot as a hobby, and has even created some of his own third party published products for it!</p>
             </div>
             <h3>Content Published:</h3>
-            <div className="section">
+            <div className={style.section}>
                 <h4>Pathfinder Infinite: Entities</h4>
                 <div>
                     <img src={entities} width="400" alt="Cover of Pathfinder Infinite: Entities"/>
@@ -25,8 +25,8 @@ function Pathfinder(){
             </div>
 
             <h3>Games Ran:</h3>
-            <div id="gamesRan">
-                <div className="gameSection section" >
+            <div id={style.gamesRan}>
+                <div className={`"${style.gameSection} ${style.section}`} >
                     <h4>Wardens of Wildwood</h4>
                     <div>
                         <img src={wardens} width="300" alt="logo for Wardens of Wildwood"/>
@@ -40,7 +40,7 @@ function Pathfinder(){
                         </p>
                     </div>
                 </div>
-                <div className="gameSection section">
+                <div className={`"${style.gameSection} ${style.section}`}>
                     <h4>Fall of Plaguestone</h4>
                     <div>
                         <img src={plaguestone} width="300" alt="logo for Fall of Plaguestone"/>
@@ -49,7 +49,7 @@ function Pathfinder(){
                         It becomes clear that if these heroes don't intervene to stop whatever evil is brewing, the fall of Plaguestone is all but certain!</p>
                     </div>
                 </div >
-                <div className="gameSection section">
+                <div className={`"${style.gameSection} ${style.section}`}>
                     <h4>March of the Dead</h4>
                     <div>
                         <img src={march} width="300" alt="logo for March of the Dead"/>
@@ -65,7 +65,7 @@ function Pathfinder(){
                         </p>
                     </div>
                 </div>
-                <div className="gameSection section" >
+                <div className={`"${style.gameSection} ${style.section}`} >
                     <h4>Washed</h4>
                     <div>
                         <img src={washed} width="300" alt="A cave filled with ooze"/>

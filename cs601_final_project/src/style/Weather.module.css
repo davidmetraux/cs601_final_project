@@ -1,5 +1,9 @@
 .background {
     background-color: aliceblue;
+
+    a {
+        word-break:break-all;
+    }
 }
 
 .weatherList {
@@ -14,10 +18,6 @@
     grid-template-columns: .25fr 1fr;
     border: 1px solid black;
     padding: 10px;
-}
-
-h2, h3 {
-    margin-top: 0px;
 }
 
 img {
@@ -38,6 +38,3 @@ img {
     order: 2;
 }
 
-a {
-    word-break:break-all;
-}
