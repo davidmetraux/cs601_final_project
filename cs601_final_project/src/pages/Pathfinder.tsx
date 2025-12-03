@@ -11,7 +11,7 @@ function Pathfinder(){
             <div className={style.section} style={{paddingTop:"0px"}}>
                 <h2>Pathfinder 2e</h2>
                 <p>Pathfinder 2e is a cooperative tabletop roleplaying game that lets you build stories and adventures with your friends. 
-                David Metraux has played this a lot as a hobby, and has even created some of his own third party published products for it!</p>
+                David Metraux has played this a lot as a hobby, and has even created some of his own third-party published products for it!</p>
             </div>
             <h3>Content Published:</h3>
             <div className={style.section}>

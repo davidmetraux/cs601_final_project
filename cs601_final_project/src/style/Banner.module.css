@@ -20,6 +20,7 @@
     position: relative;
     border-radius: 10px;
     box-shadow: 0px 3px 3px rgb(0,0,0,.5);
+    gap: 3px;
     a {
         background-color: #61cefa;
         border: none;
@@ -77,6 +78,10 @@
 @media screen and (width < 390px) {
     .overlay {
         display: none;
+    }
+    #menu {
+        gap:0;
+        font-size: 90%;
     }
 }
 
