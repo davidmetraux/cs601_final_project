@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(220, 138, 154);
-    padding: 5px;
+    padding: 0px 5px 5px 5px;
 }
 
 @media print {
