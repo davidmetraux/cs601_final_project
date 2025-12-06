@@ -156,6 +156,7 @@ function Resume(){
                     {professionalExperience(resume.professionalExperience)}
                     {education(resume.education)}
                     <button onClick={()=>window.print()}><img height={50} width={50} src={PrinterSVG} alt="printer icon"/>Print Resume</button>
+                    <p className={style.noCSSWarning}> <b>Warning:</b> Printing still prints header and footer with CSS turned off </p>
                 </section>
             )
         } else {
