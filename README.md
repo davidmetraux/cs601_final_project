@@ -27,6 +27,10 @@ https://react-hook-form.com/get-started
 Random:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
+Article (what inspired me to use it for the weather page):
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article
+
+
 # Current Work:
 - Hosted on GitHub Pages
 - Uses React
