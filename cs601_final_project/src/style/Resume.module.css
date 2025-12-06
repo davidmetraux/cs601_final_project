@@ -26,6 +26,10 @@
     }
 }
 
+.noCSSWarning {
+    display: none;
+}
+
 @media print {
   #resume {
     background-color: revert-layer;

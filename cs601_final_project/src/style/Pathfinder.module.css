@@ -27,6 +27,7 @@
 
 .section{
     border: 1px solid black;
+    border-radius: 5px;
     padding: 5px;
     background-color: rgb(254, 233, 207);
     img {
