@@ -205,7 +205,7 @@ function Contact(){
                     <p>We will get back to you at {watch().email} {watch().urgent ? "immediately, since it's urgent" : "shortly"}. {watch().favorite !== "other" && `Hopefully with a ${watch().favorite}.`}</p>
                 </div>
                 : 
-                <><p>Or can otherwise contact him here:</p> {form()}</>}
+                <><p>Or can otherwise contact him here:</p> <section><h3>Contact Form</h3>{form()}</section></>}
         </div>
 
     )

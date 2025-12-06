@@ -67,7 +67,7 @@ select.formElementWidth {
     }
 }
 
-.response, form {
+.response, section {
     border: 1px solid black;
     width: fit-content;
     padding: 5px;
