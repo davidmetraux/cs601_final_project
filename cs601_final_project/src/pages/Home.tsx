@@ -15,6 +15,7 @@ function Home() {
                         <section key={route.href} className={style.section}>
                             <h3>{route.name}</h3>
                             <p>{route.description}</p>
+                            {route.image && route.image}
                             <Link to={{pathname: route.href}}>Visit {route.name}</Link>
                         </section>
                     )
