@@ -80,4 +80,9 @@ select.formElementWidth {
 .links {
     list-style: none;
     padding-left: 0;
+    img {
+        height: 20px;
+        vertical-align:middle;
+        margin-right: 5px;
+    }
 }

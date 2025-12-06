@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import style from '../style/Form.module.css'
-
+import GHLogo from '../media/github-mark.svg';
+import  LILogo from '../media/LinkedIn_icon.svg';
 
 type Inputs = {
   name: string,
@@ -193,8 +194,8 @@ function Contact(){
             <div>
                 You can find David Metraux at the following locations:
                 <ul className={style.links}>
-                    <li><a href='https://www.linkedin.com/in/david-metraux-a46559120/' target='_blank' rel="noreferrer">LinkedIn</a></li>
-                    <li><a href='https://github.com/davidmetraux' target='_blank' rel="noreferrer">Github</a></li>
+                    <li><img src={LILogo} height={100} alt='linkedin logo'/><a href='https://www.linkedin.com/in/david-metraux-a46559120/' target='_blank' rel="noreferrer">LinkedIn</a></li>
+                    <li><img src={GHLogo} height={100} alt='github logo'/><a href='https://github.com/davidmetraux' target='_blank' rel="noreferrer">Github</a></li>
                 </ul>
             </div>
             {submitted ? 

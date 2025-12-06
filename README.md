@@ -31,6 +31,9 @@ Article (what inspired me to use it for the weather page):
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article
 
 
+Adding SVGs:
+https://create-react-app.dev/docs/adding-images-fonts-and-files/#adding-svgs
+
 # Current Work:
 - Hosted on GitHub Pages
 - Uses React
