@@ -26,10 +26,11 @@ function Banner(){
 
 
         <div>
-            <menu id={styles.menu}>
-                {listLinks}
-
-            </menu>
+            <nav >
+                <ul id={styles.menu}>
+                    {listLinks}
+                </ul>
+            </nav>
         </div>
     </div>
     )
