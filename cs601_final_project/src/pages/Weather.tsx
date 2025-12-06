@@ -41,7 +41,7 @@ function Weather(){
 
     const getWeek = () => {
         let days = weatherPeriods?.map((period)=>{
-            return <div className={style.day} key={period.number}>{getDay(period)}</div>
+            return <article className={style.day} key={period.number}>{getDay(period)}</article>
         })
 
         return (
@@ -59,10 +59,10 @@ function Weather(){
                         <h3>{period.name}</h3>
                     </div>
                     <div>
-                        {period.shortForecast}
+                        <b>Summary:</b> {period.shortForecast}
                     </div>
                     <div>
-                        {period.temperature} ° {period.temperatureUnit}
+                        <b>Temperature:</b> {period.temperature} ° {period.temperatureUnit}
                     </div>
                 </div>
                 <div className={style.icon}>
