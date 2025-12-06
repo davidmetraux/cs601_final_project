@@ -24,6 +24,10 @@
   background: #476e72; 
 }
 
+footer {
+  background-color: rgb(67, 143, 143)
+}
+
 @media print {
   .wrapper {
     overflow-y: visible;
