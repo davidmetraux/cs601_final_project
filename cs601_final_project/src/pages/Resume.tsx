@@ -73,10 +73,10 @@ function Resume(){
 
     const summary = (summary: string) => {
         return (
-            <div className={style.section}>
+            <section className={style.section}>
                 <h3>Summary</h3>
                 <p>{summary}</p>
-            </div>
+            </section>
         )
     }
 
@@ -84,21 +84,21 @@ function Resume(){
 
     const skills = (programmingLanguages: string, frameworksLibraries: string, other: string)=>{
         return (
-            <div className={style.section}>
+            <section className={style.section}>
                 <h3>Skills</h3>
                 <p>Programming Languages: {programmingLanguages}</p>
                 <p>Frameworks/Libraries: {frameworksLibraries}</p>
                 <p>Other: {other}</p>
-            </div>
+            </section>
         )
     }
 
     const professionalExperience = (jobs: Job[]) => 
-                <div className={style.section}>
+                <section className={style.section}>
                     <h3>Professional Experience</h3>
                     {jobs.map((job)=>{
                         return (
-                            <div className={requiresMultipleSections(jobs)} key={job.company+job.startMonth+job.endYear}>
+                            <section className={requiresMultipleSections(jobs)} key={job.company+job.startMonth+job.endYear}>
                                 <h4>{job.role}</h4>
                                 <p>{job.company}</p>
                                 <p>{job.description}</p>
@@ -106,10 +106,10 @@ function Resume(){
                                 {feats(job.feats)}
                                 <p>Additional Work:</p>
                                 {details(job.additionalWork)}
-                            </div>
+                            </section>
                         )
                     })}
-                </div>
+                </section>
 
     const feats = (feats: Feat[]) => 
         <ul>
@@ -131,35 +131,35 @@ function Resume(){
         </ul>
 
     const education = (educations: Education[]) =>
-        <div className={style.section}>
+        <section className={style.section}>
             <h3>Education</h3>
             {educations.map((education)=>{
                 return (
-                    <div className={requiresMultipleSections(educations)}  key={education.degree+education.endYear}>
+                    <section className={requiresMultipleSections(educations)}  key={education.degree+education.endYear}>
                         <h4>{education.degree}</h4>
                         <p>{education.major}</p>
                         <p>Graduated: {education.endMonth} {education.endYear}</p>
                         <p>{education.feat}</p>
                         <p>{education.institution}, {education.location}</p>
-                    </div>
+                    </section>
                 )
             })}
-        </div>
+        </section>
     
     const output = (resume: ResumeType | undefined)=>{
         if (resume){
             return (
-                <div id={style.resume}>
+                <section id={style.resume}>
                     <h2>David Metraux's Resume</h2>
                     {summary(resume.summary)}
                     {skills(resume.skills.programmingLanguages, resume.skills.frameworksLibraries, resume.skills.programmingLanguages)}
                     {professionalExperience(resume.professionalExperience)}
                     {education(resume.education)}
                     <button onClick={()=>window.print()}><img height={100} src={PrinterSVG}/>Print Resume</button>
-                </div>
+                </section>
             )
         } else {
-            return (<div>Loading Resume</div>)
+            return (<section>Loading Resume</section>)
         }
 
     }
