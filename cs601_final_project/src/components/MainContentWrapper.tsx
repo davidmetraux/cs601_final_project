@@ -6,7 +6,7 @@ interface Props {
 }
 
 function MainContentWrapper({children} : Props){
-    return <div className='wrapper'>{children}</div>
+    return <main className='wrapper'>{children}</main>
 }
 
 export default MainContentWrapper;
