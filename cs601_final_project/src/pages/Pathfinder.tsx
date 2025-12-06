@@ -8,25 +8,28 @@ import entities from "../media/entities.png"
 function Pathfinder(){
     return (
         <div className={style.root}>
-            <div className={style.section} style={{paddingTop:"0px"}}>
+            <section className={style.section} style={{paddingTop:"0px"}}>
                 <h2>Pathfinder 2e</h2>
                 <p>Pathfinder 2e is a cooperative tabletop roleplaying game that lets you build stories and adventures with your friends. 
                 David Metraux has played this a lot as a hobby, and has even created some of his own third-party published products for it!</p>
-            </div>
-            <h3>Content Published:</h3>
-            <div className={style.section}>
-                <h4>Pathfinder Infinite: Entities</h4>
-                <div>
-                    <img src={entities} width="400" alt="Cover of Pathfinder Infinite: Entities"/>
-                    <p>Fourteen mysterious entities beckon your player characters with power. With new bard muses, witch patron themes, a champion cause, an animist apparition, pactbinder feats, wizard focus spells, and covenants, 
-                    who will you evoke the attention of? <a href="https://www.pathfinderinfinite.com/en/product/506194/entities" target="blank">Click here to see on Pathfinder Infinite</a></p>
-                </div>
-                    
-            </div>
+            </section>
 
+            <section>
+            <h3>Content Published:</h3>
+                <article className={style.section}>
+                    <h4>Pathfinder Infinite: Entities</h4>
+                    <div>
+                        <img src={entities} width="400" alt="Cover of Pathfinder Infinite: Entities"/>
+                        <p>Fourteen mysterious entities beckon your player characters with power. With new bard muses, witch patron themes, a champion cause, an animist apparition, pactbinder feats, wizard focus spells, and covenants, 
+                        who will you evoke the attention of? <a href="https://www.pathfinderinfinite.com/en/product/506194/entities" target="blank">Click here to see on Pathfinder Infinite</a></p>
+                    </div>   
+                </article>
+            </section>
+
+            <section>
             <h3>Games Ran:</h3>
             <div id={style.gamesRan}>
-                <div className={`"${style.gameSection} ${style.section}`} >
+                <article className={`"${style.gameSection} ${style.section}`} >
                     <h4>Wardens of Wildwood</h4>
                     <div>
                         <img src={wardens} width="300" alt="logo for Wardens of Wildwood"/>
@@ -39,8 +42,8 @@ function Pathfinder(){
                             much potential to spark war.
                         </p>
                     </div>
-                </div>
-                <div className={`"${style.gameSection} ${style.section}`}>
+                </article>
+                <article className={`"${style.gameSection} ${style.section}`}>
                     <h4>Fall of Plaguestone</h4>
                     <div>
                         <img src={plaguestone} width="300" alt="logo for Fall of Plaguestone"/>
@@ -48,8 +51,8 @@ function Pathfinder(){
                         to solve the murder of a friend. What starts as a simple investigation quickly turns sinister with the discovery of forbidden alchemy, mutant animals, and a nearby forest rotting away due to a mysterious blight. 
                         It becomes clear that if these heroes don't intervene to stop whatever evil is brewing, the fall of Plaguestone is all but certain!</p>
                     </div>
-                </div >
-                <div className={`"${style.gameSection} ${style.section}`}>
+                </article >
+                <article className={`"${style.gameSection} ${style.section}`}>
                     <h4>March of the Dead</h4>
                     <div>
                         <img src={march} width="300" alt="logo for March of the Dead"/>
@@ -64,17 +67,18 @@ function Pathfinder(){
                             another victim of this ancient conflict.
                         </p>
                     </div>
-                </div>
-                <div className={`"${style.gameSection} ${style.section}`} >
+                </article>
+                <article className={`"${style.gameSection} ${style.section}`} >
                     <h4>Washed</h4>
                     <div>
                         <img src={washed} width="300" alt="A cave filled with ooze"/>
                         <p>In the nation-state of Oenopion in the kingdom of Nex, Alchemy rules with an iron fist. 
                         Will the heroes uncover the mysteries and free Oenopion from the tyranny of the upper class, or will they be washed away? Note: This was a campaign I personally created.</p>
                     </div>
-                </div>
+                </article>
 
             </div>
+            </section>
         </div>
     )
 }
