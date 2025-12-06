@@ -64,11 +64,13 @@ function Game(){
             <h2>Game</h2>
             <p>David Metraux likes playing games, so he made one here. Click the correct square. If you fail, you'll get a hint!</p>
             <div className={style.gameHolder}>
-                <button onClick={()=>setDifficulty("easy")}>Easy</button>
-                <button onClick={()=>setDifficulty("medium")}>Medium</button>
-                <button onClick={()=>setDifficulty("hard")}>Hard</button>
-                <p className={style.capitalize}>Difficulty: {difficulty}</p>
-                <p>Score: {score}</p>
+                <menu>
+                    <li><button onClick={()=>setDifficulty("easy")}>Easy</button></li>
+                    <li><button onClick={()=>setDifficulty("medium")}>Medium</button></li>
+                    <li><button onClick={()=>setDifficulty("hard")}>Hard</button></li>
+                </menu>
+                <p className={style.capitalize}><b>Difficulty:</b>  {difficulty}</p>
+                <p><b>Score:</b> {score}</p>
                 <h3 className={style.capitalize}>Click On: {currentAnswer && currentAnswer}</h3>
                 <div className={style.squareHolder}>
                     {
