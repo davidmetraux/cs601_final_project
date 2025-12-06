@@ -8,7 +8,7 @@ import entities from "../media/entities.png"
 function Pathfinder(){
     return (
         <div className={style.root}>
-            <section className={style.section} style={{paddingTop:"0px"}}>
+            <section className={`${style.section} ${style.first}`}>
                 <h2>Pathfinder 2e</h2>
                 <p>Pathfinder 2e is a cooperative tabletop roleplaying game that lets you build stories and adventures with your friends. 
                 David Metraux has played this a lot as a hobby, and has even created some of his own third-party published products for it!</p>
