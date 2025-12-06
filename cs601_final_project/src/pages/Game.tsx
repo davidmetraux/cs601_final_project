@@ -63,7 +63,7 @@ function Game(){
         <div className={style.background}>
             <h2>Game</h2>
             <p>David Metraux likes playing games, so he made one here. Click the correct square. If you fail, you'll get a hint!</p>
-            <div className={style.gameHolder}>
+            <section className={style.gameHolder}>
                 <menu>
                     <li><button onClick={()=>setDifficulty("easy")}>Easy</button></li>
                     <li><button onClick={()=>setDifficulty("medium")}>Medium</button></li>
@@ -81,7 +81,7 @@ function Game(){
                             </div>
                     )})}
                 </div>
-            </div>
+            </section>
         </div>
     )
 }
