@@ -21,7 +21,7 @@ function Pathfinder(){
                     <div>
                         <img src={entities} width="400" alt="Cover of Pathfinder Infinite: Entities"/>
                         <p>Fourteen mysterious entities beckon your player characters with power. With new bard muses, witch patron themes, a champion cause, an animist apparition, pactbinder feats, wizard focus spells, and covenants, 
-                        who will you evoke the attention of? <a href="https://www.pathfinderinfinite.com/en/product/506194/entities" target="blank">Click here to see on Pathfinder Infinite</a></p>
+                        who will <i>you</i> evoke the attention of? <br/><a href="https://www.pathfinderinfinite.com/en/product/506194/entities" target="blank">Click here to see on Pathfinder Infinite</a></p>
                     </div>   
                 </article>
             </section>
@@ -73,7 +73,7 @@ function Pathfinder(){
                     <div>
                         <img src={washed} width="300" alt="A cave filled with ooze"/>
                         <p>In the nation-state of Oenopion in the kingdom of Nex, Alchemy rules with an iron fist. 
-                        Will the heroes uncover the mysteries and free Oenopion from the tyranny of the upper class, or will they be washed away? Note: This was a campaign I personally created.</p>
+                        Will the heroes uncover the mysteries and free Oenopion from the tyranny of the upper class, or will they be washed away? <br/><b>Note:</b> This was a campaign I personally created.</p>
                     </div>
                 </article>
 

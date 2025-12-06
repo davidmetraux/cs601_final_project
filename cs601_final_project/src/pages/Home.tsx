@@ -12,11 +12,11 @@ function Home() {
             <div className={style.grid}>
                 {homelessRoutes.map((route)=>{
                     return (
-                        <div key={route.href} className={style.section}>
+                        <article key={route.href} className={style.section}>
                             <h3>{route.name}</h3>
                             <p>{route.description}</p>
                             <Link to={{pathname: route.href}}>Visit {route.name}</Link>
-                        </div>
+                        </article>
                     )
                 })}
             </div>

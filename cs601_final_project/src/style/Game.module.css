@@ -95,7 +95,7 @@
 .background {
     height: 100%;
     min-height: fit-content;
-    background-color: wheat;
+    background-color: rgb(238, 199, 226);
 }
 
 .colorNameForNoCSS {
