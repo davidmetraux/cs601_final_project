@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import style from "../style/Resume.module.css"
+import PrinterSVG from "../media/print-printer-svgrepo-com.svg"
 
 interface ResumeType {
     summary: string,
@@ -154,7 +155,7 @@ function Resume(){
                     {skills(resume.skills.programmingLanguages, resume.skills.frameworksLibraries, resume.skills.programmingLanguages)}
                     {professionalExperience(resume.professionalExperience)}
                     {education(resume.education)}
-                    <button onClick={()=>window.print()}>Print Resume</button>
+                    <button onClick={()=>window.print()}><img height={100} src={PrinterSVG}/>Print Resume</button>
                 </div>
             )
         } else {

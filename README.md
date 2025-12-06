@@ -34,6 +34,9 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/article
 Adding SVGs:
 https://create-react-app.dev/docs/adding-images-fonts-and-files/#adding-svgs
 
+Printer SVG from:
+https://www.svgrepo.com/svg/231013/print-printer
+
 # Current Work:
 - Hosted on GitHub Pages
 - Uses React

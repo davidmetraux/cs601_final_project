@@ -11,6 +11,19 @@
     flex-direction: column;
     background-color: rgb(220, 138, 154);
     padding: 0px 5px 5px 5px;
+
+    button {
+      background-color: rgb(217, 173, 173);
+      &:hover {
+          background-color: rgb(175, 108, 108);
+      }
+    }
+
+    img {
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
 }
 
 @media print {

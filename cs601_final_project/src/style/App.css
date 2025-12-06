@@ -12,3 +12,9 @@ h2, h3 {
 img {
     height: 100%;  
 }
+
+@media print {
+  footer {
+    display: none;
+  }
+}
