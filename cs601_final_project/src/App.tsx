@@ -21,6 +21,7 @@ function App() {
             })}
           </Routes>
         </MainContentWrapper>
+        <footer>Copyright David Metraux 2025</footer>
       </div>
     </HashRouter>
   );
