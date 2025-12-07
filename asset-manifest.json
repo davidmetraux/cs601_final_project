@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cs601_final_project/static/css/main.fc90a74f.css",
-    "main.js": "/cs601_final_project/static/js/main.0e94b81a.js",
+    "main.css": "/cs601_final_project/static/css/main.2c5a4286.css",
+    "main.js": "/cs601_final_project/static/js/main.6952c337.js",
     "static/js/453.64647bcb.chunk.js": "/cs601_final_project/static/js/453.64647bcb.chunk.js",
     "static/media/headshot_no_bg.png": "/cs601_final_project/static/media/headshot_no_bg.4fe1ff8f8d988dc16e37.png",
     "static/media/entities.png": "/cs601_final_project/static/media/entities.3d360c3a9adbd6564e50.png",
@@ -18,12 +18,12 @@
     "static/media/github-mark.svg": "/cs601_final_project/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "index.html": "/cs601_final_project/index.html",
     "static/media/email-svgrepo-com.svg": "/cs601_final_project/static/media/email-svgrepo-com.daf06466142947d4608addc4af252038.svg",
-    "main.fc90a74f.css.map": "/cs601_final_project/static/css/main.fc90a74f.css.map",
-    "main.0e94b81a.js.map": "/cs601_final_project/static/js/main.0e94b81a.js.map",
+    "main.2c5a4286.css.map": "/cs601_final_project/static/css/main.2c5a4286.css.map",
+    "main.6952c337.js.map": "/cs601_final_project/static/js/main.6952c337.js.map",
     "453.64647bcb.chunk.js.map": "/cs601_final_project/static/js/453.64647bcb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc90a74f.css",
-    "static/js/main.0e94b81a.js"
+    "static/css/main.2c5a4286.css",
+    "static/js/main.6952c337.js"
   ]
 }
