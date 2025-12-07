@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cs601_final_project/static/css/main.2c5a4286.css",
-    "main.js": "/cs601_final_project/static/js/main.6952c337.js",
+    "main.css": "/cs601_final_project/static/css/main.9ac98b2b.css",
+    "main.js": "/cs601_final_project/static/js/main.58f8f6df.js",
     "static/js/453.64647bcb.chunk.js": "/cs601_final_project/static/js/453.64647bcb.chunk.js",
     "static/media/headshot_no_bg.png": "/cs601_final_project/static/media/headshot_no_bg.4fe1ff8f8d988dc16e37.png",
     "static/media/entities.png": "/cs601_final_project/static/media/entities.3d360c3a9adbd6564e50.png",
@@ -10,6 +10,7 @@
     "static/media/900px-Wardens_of_Wildwood_logo.png": "/cs601_final_project/static/media/900px-Wardens_of_Wildwood_logo.d65cd205d1879d7a56ed.png",
     "static/media/March_of_the_Dead.png": "/cs601_final_project/static/media/March_of_the_Dead.96370bcf1e5269425ab9.png",
     "static/media/Fall_of_Plaguestone.png": "/cs601_final_project/static/media/Fall_of_Plaguestone.dbe559f4b94450ef9731.png",
+    "static/media/click-png-45034.png": "/cs601_final_project/static/media/click-png-45034.32640f09a807cbb06866.png",
     "static/media/weather-svgrepo-com.svg": "/cs601_final_project/static/media/weather-svgrepo-com.48ee5fb6aa8c0f81b08f2d715681c5fd.svg",
     "static/media/game-controller-gaming-svgrepo-com.svg": "/cs601_final_project/static/media/game-controller-gaming-svgrepo-com.f12c4354a121daace44325d9039379a4.svg",
     "static/media/resume-svgrepo-com.svg": "/cs601_final_project/static/media/resume-svgrepo-com.91add1851336d60e1d1344b7e180a71f.svg",
@@ -18,12 +19,12 @@
     "static/media/github-mark.svg": "/cs601_final_project/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "index.html": "/cs601_final_project/index.html",
     "static/media/email-svgrepo-com.svg": "/cs601_final_project/static/media/email-svgrepo-com.daf06466142947d4608addc4af252038.svg",
-    "main.2c5a4286.css.map": "/cs601_final_project/static/css/main.2c5a4286.css.map",
-    "main.6952c337.js.map": "/cs601_final_project/static/js/main.6952c337.js.map",
+    "main.9ac98b2b.css.map": "/cs601_final_project/static/css/main.9ac98b2b.css.map",
+    "main.58f8f6df.js.map": "/cs601_final_project/static/js/main.58f8f6df.js.map",
     "453.64647bcb.chunk.js.map": "/cs601_final_project/static/js/453.64647bcb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c5a4286.css",
-    "static/js/main.6952c337.js"
+    "static/css/main.9ac98b2b.css",
+    "static/js/main.58f8f6df.js"
   ]
 }
