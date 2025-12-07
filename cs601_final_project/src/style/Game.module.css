@@ -5,12 +5,19 @@
     gap: 10px;
     margin: auto;
 
-    > div {
+    > button {
         width: 100px;
         height: 100px;
         transition: 0.3s;
         box-sizing: border-box;
         border-radius: 5px;
+        padding: 0;
+
+        &:hover div.overlay{
+            height: 100%;
+            width: 100%;
+            background-color :rgba(0, 0, 0, 0.20)
+        }
     }
 }
 
@@ -29,7 +36,7 @@
         justify-content: space-between;
     }
 
-    button {
+    menu button {
         background-color: #dd90e0;
         border: none;
         border-radius: 5px;
@@ -43,11 +50,11 @@
         margin: 3px;
     }
 
-    button:hover {
+    menu button:hover {
         background-color: rgb(160, 95, 153);
     }
 
-    button:active {
+    menu button:active {
         background-color: #dd90e0;
     }
 }
@@ -85,14 +92,14 @@
 }
 
 .current {
-    border: 5px solid black;
+    border: 6px solid black;
 }
 
 .hint {
     border: 10px solid rgb(200, 118, 205);
 }
 
-.background {
+.background {   
     height: 100%;
     min-height: fit-content;
     background-color: rgb(238, 199, 226);

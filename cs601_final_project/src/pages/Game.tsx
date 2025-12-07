@@ -76,9 +76,9 @@ function Game(){
                     {
                         colors && colors.map((color)=>{ 
                             return (
-                            <div key={color} id={style[color]} className={isCurrent(color)} onClick={(e)=>{checkIfRightOne(e, color)}}>
-                                <p className={style.colorNameForNoCSS}>{color}</p>
-                            </div>
+                            <button key={color} id={style[color]} className={isCurrent(color)} onClick={(e)=>{checkIfRightOne(e, color)}}>
+                                <div className={style.overlay}><p className={style.colorNameForNoCSS}>{color}</p></div>
+                            </button>
                     )})}
                 </div>
             </section>
