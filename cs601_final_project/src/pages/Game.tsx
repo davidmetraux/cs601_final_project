@@ -1,5 +1,6 @@
 import { MouseEvent, useState, useEffect} from "react"
 import style from '../style/Game.module.css'
+import click from "../media/click-png-45034.png"
 
 function Game(){
     
@@ -63,6 +64,7 @@ function Game(){
         <div className={style.background}>
             <h2>Game</h2>
             <p>David Metraux likes playing games, so he made one here. Click the correct square. If you fail, you'll get a hint!</p>
+            <img width={100} height={100} src={click} alt="a finger clicking" className={style.icon}/>
             <section className={style.gameHolder}>
                 <menu>
                     <li><button onClick={()=>setDifficulty("easy")}>Easy</button></li>
