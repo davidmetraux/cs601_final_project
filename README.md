@@ -1,5 +1,13 @@
 # cs601_final_project
 
+Final Project for David Metraux for CS601. It's a website about David's interests/life:
+
+1. Home Page
+2. Pathfinder Page
+3. Boston Weather Page
+4. Contact Page
+5. Game Page
+
 # Run locally
 
 Go to cs601_finalproject
@@ -59,6 +67,7 @@ Email Logo under MIT License
 - Page that gives some contact information and gives a dummy form with a variety of options
 - Page that uses Grid and Float that shows off a hobby of mine, Pathfinder
 - Page that asynchronously fetches a json of my Resume from the public folder and formats it. 
+- Page that contains a simple game
 
 # Cool Notable Things:
 General:
@@ -67,6 +76,8 @@ General:
 - website works without CSS
 - Works on mobile views down to ~350px
 - TypeScript used
+- CSS modules used
+- media queries used for screen width and printing
 
 Banner:
 - Gradient used
@@ -92,6 +103,13 @@ Contact David:
 - Uses inputs, textarea, select, checkbox, and radio select
 - validates input accordingly, with errors appearing after submission and updating with further edits
 
+Resume:
+- Fetches JSON
+- Iterates over JSON to show content
+- Able to be printed, and removes certain elements that we don't want to be printed
+
+Game: 
+- Uses buttons and React for a simple game.
 
 # MIT License
 
