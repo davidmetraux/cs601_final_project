@@ -8,6 +8,21 @@ Final Project for David Metraux for CS601. It's a website about David's interest
 4. Contact Page
 5. Game Page
 
+# Development
+Generally:
+- Work on dev branch
+- Merge into main branch
+- deploy to gh-pages branch
+
+But there are times I accidentally committed to the main branch first.
+
+# Install
+Go to cs601_finalproject
+```shell
+$ npm install
+```
+
+
 # Run locally
 
 Go to cs601_finalproject
@@ -56,7 +71,7 @@ Pathfinder Logo under Paizo's Community Use Policy
 
 Email Logo under MIT License
 
-# Current Work:
+# Work:
 - Hosted on GitHub Pages
 - Uses React
 - Styled Banner with Image
