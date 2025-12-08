@@ -5,6 +5,7 @@
     padding-right: 10%;
     flex-grow: 1;
     overflow-y: auto;
+    overflow-x: clip;
     height: 0; /*needed for scrollbar*/
     background-color: #76bbc1;
     padding-top: 10px;

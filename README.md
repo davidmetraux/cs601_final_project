@@ -1,5 +1,12 @@
 # cs601_final_project
 
+# Run locally
+
+Go to cs601_finalproject
+```shell
+$ npm run start
+```
+
 # Deployment
 Go to cs601_finalproject
 ```shell
